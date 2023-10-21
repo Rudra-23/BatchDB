@@ -46,14 +46,17 @@ class InsertValues():
         if item == None:
             return "No Table Found"
         
-        for i, v  in zip(item['columns'].values(), self.values):
+        for index, (i, v)  in enumerate(zip(item['columns'].values(), self.values)):
             try:
                 if i == "str":
-                    str(v)
+                    assert v[0] == '"' and v[-1] == '"'
+                    self.values[index] = str(self.values[index])[1:-1]
                 if i == "int":
                     int(v)
+                    self.values[index] = int(self.values[index])
                 if i == "float":
                     float(v)
+                    self.values[index] = float(self.values[index])
                     
             except:
                 return "item's datatype does not match"

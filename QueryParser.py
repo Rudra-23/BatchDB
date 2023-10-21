@@ -5,6 +5,8 @@ from DML.InsertValues import InsertValues
 from DML.UpdateValues import UpdateValues
 from DML.DeleteValues import DeleteValues
 
+from DisplayValues import DisplayValues
+
 def parseQuery(query: str):
 
     if query.lower().startswith("create"):
@@ -66,6 +68,18 @@ def parseQuery(query: str):
             print("ERROR: ", status)
 
         del delete
+
+    if query.lower().startswith("get"):
+        display = DisplayValues(query)
+        status = display.process_query()
+
+        if status == "VALID":
+            message = display.display_values()
+            print(message)
+        else:
+            print("Error: ", status)
+        
+        del display
 
 if __name__ == "__main__":
     print("Please Enter your Queries: ")

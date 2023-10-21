@@ -1,6 +1,7 @@
 import re
 import csv
 import json
+import os
 
 class CreateTable:
     name = None
@@ -35,6 +36,9 @@ class CreateTable:
     def create_table(self):
         file_name = f"./Data/{self.name}.csv"
     
+        if os.path.isfile(file_name):
+            return "Table Already Exists."
+        
         column_names = list(self.cols.keys())
         data_types = list(self.cols.values())
 

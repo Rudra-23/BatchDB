@@ -1,0 +1,30 @@
+Commands:
+
+1. Create
+
+create table [Table_name] (col1: data type1, col2: data type2)
+Ex. create table student (name str, age int, grade float)
+
+2. Insert
+
+insert into [Table_name] (value1, value2) {values must me in order of table}
+Ex. insert into student (rudra, 10)
+
+3. Update
+update (col1: value1, col2: value2, ..) in [Table_name] where (conditions) {conditions are boolean statements col1 == temp1 and col2 >= 10 etc.}
+Ex. update (name: xyz) in student where (name == "abc" and id >= 10)
+ 
+4. Delete
+
+delete from [Table_name] where (conditions) {conditions are boolean statements col1 == temp1 and col2 >= 10 etc.}
+Ex. delete from student where (name == "abc" and id >= 10)
+
+5. Drop
+
+drop table [Table_name]
+Ex. drop table student
+
+6. Get
+
+get (col1, col2, col3) in student where (conditions) {conditions are boolean statements col1 == temp1 and col2 >= 10 etc.}
+Ex. get (name, id) in student where (name == 'xyz' and id >= 10)
