@@ -3,6 +3,7 @@ import os
 
 class ExternalMergeSorter:
     def __init__(self, table_name, attributes, order = "ASC"):
+        self.file_name = './Data/' + table_name + ".csv"
         self.table_name = table_name
         self.attributes = attributes
         self.tmp_dir = "./TMP/"
@@ -10,8 +11,7 @@ class ExternalMergeSorter:
 
     def split_file(self):
         chunk_size = 1000
-
-        reader = pd.read_csv(self.table_name, chunksize=chunk_size)
+        reader = pd.read_csv(self.file_name, chunksize=chunk_size)
 
         for i, chunk in enumerate(reader):
             temp_file_name = self.tmp_dir + f"temp_{i}.csv"
@@ -42,7 +42,7 @@ class ExternalMergeSorter:
             
             temp_file_list = new_temp_file_list
 
-        os.rename(self.tmp_dir + temp_file_list[0], self.tmp_dir + "Sorted.csv")
+        os.rename(self.tmp_dir + temp_file_list[0], "./Data/" + self.table_name + '_sorted.csv')
 
     def merge_two_files(self, file1, file2):
 
@@ -81,7 +81,6 @@ class ExternalMergeSorter:
                 merged_file.write(df1.to_csv(index=False, header=False))
                 df1 = next(reader1, None)
             
-            
             while df2 is not None:
                 merged_file.write(df2.to_csv(index=False, header=False))
                 df2 = next(reader2, None)
@@ -93,5 +92,5 @@ class ExternalMergeSorter:
         self.merge_files()
 
 if __name__ == "__main__":
-    sorter = ExternalMergeSorter("./Data/student.csv", ["age", "name"], "ASC")
+    sorter = ExternalMergeSorter("student", ["age", "name", "gpa"], "ASC")
     sorter.sort()

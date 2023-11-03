@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "table_name": "student",
+        "columns": {
+            "name": "str",
+            "age": "int",
+            "grade": "float"
+        }
+    }
+]
