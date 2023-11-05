@@ -92,5 +92,7 @@ class ExternalMergeSorter:
         self.merge_files()
 
 if __name__ == "__main__":
-    sorter = ExternalMergeSorter("_joined_student_athlete", ["student.age", "athlete.weight"], "DESC")
+    # sorter = ExternalMergeSorter("_joined_student_athlete", ["student.age", "athlete.weight"], "DESC")
+    sorter = ExternalMergeSorter("_filtered__joined_student_athlete", ["student.age"], "ASC")
+    
     sorter.sort()

@@ -6,7 +6,11 @@ class Filter():
     def __init__(self, table_name, statement) -> None:
         self.table_name = table_name
         self.statement = True if statement == "" else statement
+        self.statement_cleaned = self.statement
 
+    def clean_statement(self, namespace, namespace_cleaned):
+        for col, col_cleaned in zip(namespace, namespace_cleaned):
+            self.statement_cleaned = self.statement_cleaned.replace(col, col_cleaned)
 
     def filter_data(self):
         with open("./Data/" + "_filtered_" + self.table_name + '.csv', 'a', newline="") as output:
@@ -23,9 +27,11 @@ class Filter():
                     for index, item in df.iterrows():
                         namespace.update(item)
                     
-                    namespace = {key.replace('.', '__'): value for key, value in namespace.items()}
+                    namespace_cleaned = {key.replace('.', '_').replace('(', '_').replace(')', '_'): value for key, value in namespace.items()}
 
-                    if eval(self.statement, namespace):
+                    self.clean_statement(list(namespace.keys()), list(namespace_cleaned))
+                    
+                    if eval(self.statement_cleaned, namespace_cleaned):
                         output.write(df.to_csv(index= False, header=False))    
                 except:
                     print("Incorrect syntax or variables.")
@@ -38,5 +44,6 @@ class Filter():
 
 
 if __name__ == "__main__":
-    obj = Filter("_sorted__joined_student_athlete", "student__age <= 20 and athlete__sport in ['Basketball', 'Soccer']")
+    # obj = Filter("_joined_student_athlete", "student.age >= 20 or athlete.sport in ['Basketball', 'Soccer']")
+    obj = Filter("_groupby__sorted__filtered__joined_student_athlete", "count(student.id) >= 5 and avg(athlete.weight) != 182.0")
     obj.filter() 
