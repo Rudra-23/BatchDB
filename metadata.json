@@ -2,9 +2,18 @@
     {
         "table_name": "student",
         "columns": {
+            "id": "int",
             "name": "str",
             "age": "int",
-            "grade": "float"
+            "gpa": "float"
+        }
+    }, 
+    {
+        "table_name": "athlete",
+        "columns": {
+            "id": "int",
+            "sport": "str",
+            "weight": "int"
         }
     }
 ]

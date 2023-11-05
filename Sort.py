@@ -42,7 +42,7 @@ class ExternalMergeSorter:
             
             temp_file_list = new_temp_file_list
 
-        os.rename(self.tmp_dir + temp_file_list[0], "./Data/" + self.table_name + '_sorted.csv')
+        os.rename(self.tmp_dir + temp_file_list[0], "./Data/" + "_sorted_" + self.table_name + '.csv')
 
     def merge_two_files(self, file1, file2):
 
@@ -92,5 +92,5 @@ class ExternalMergeSorter:
         self.merge_files()
 
 if __name__ == "__main__":
-    sorter = ExternalMergeSorter("student", ["age", "name", "gpa"], "ASC")
+    sorter = ExternalMergeSorter("_joined_student_athlete", ["student.age", "athlete.weight"], "DESC")
     sorter.sort()
