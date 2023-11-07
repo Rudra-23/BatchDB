@@ -4,6 +4,7 @@ from DDL.DropTable import DropTable
 from DML.InsertValues import InsertValues
 from DML.UpdateValues import UpdateValues
 from DML.DeleteValues import DeleteValues
+
 from QueryParser import QueryParser
 
 def parseQuery(query: str):
