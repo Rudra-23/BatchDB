@@ -8,14 +8,17 @@ class Filter():
         self.statement = True if statement == "" else statement
         self.statement_cleaned = self.statement
 
+        self.tmp_dir = "./TMP/"
+        self.data_dir = "./Data/"
+
     def clean_statement(self, namespace, namespace_cleaned):
         for col, col_cleaned in zip(namespace, namespace_cleaned):
             self.statement_cleaned = self.statement_cleaned.replace(col, col_cleaned)
 
     def filter_data(self):
-        with open("./Data/" + "_filtered_" + self.table_name + '.csv', 'a', newline="") as output:
+        with open(self.data_dir + "_filtered_" + self.table_name + '.csv', 'a', newline="") as output:
             
-            reader = pd.read_csv("./Data/" + self.table_name + '.csv', chunksize = 1)
+            reader = pd.read_csv(self.data_dir + self.table_name + '.csv', chunksize = 1)
 
             df = next(reader, None)
 

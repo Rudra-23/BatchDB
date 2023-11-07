@@ -3,11 +3,14 @@ import os
 
 class ExternalMergeSorter:
     def __init__(self, table_name, attributes, order = "ASC"):
-        self.file_name = './Data/' + table_name + ".csv"
         self.table_name = table_name
         self.attributes = attributes
-        self.tmp_dir = "./TMP/"
         self.order = order
+
+        self.tmp_dir = "./TMP/"
+        self.data_dir = "./Data/"
+
+        self.file_name = self.data_dir + table_name + ".csv"
 
     def split_file(self):
         chunk_size = 1000
@@ -42,7 +45,7 @@ class ExternalMergeSorter:
             
             temp_file_list = new_temp_file_list
 
-        os.rename(self.tmp_dir + temp_file_list[0], "./Data/" + "_sorted_" + self.table_name + '.csv')
+        os.rename(self.tmp_dir + temp_file_list[0], self.data_dir + "_sorted_" + self.table_name + '.csv')
 
     def merge_two_files(self, file1, file2):
 

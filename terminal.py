@@ -4,6 +4,7 @@ from DDL.DropTable import DropTable
 from DML.InsertValues import InsertValues
 from DML.UpdateValues import UpdateValues
 from DML.DeleteValues import DeleteValues
+from QueryParser import QueryParser
 
 def parseQuery(query: str):
 
@@ -66,6 +67,15 @@ def parseQuery(query: str):
             print("ERROR: ", status)
 
         del delete
+    
+    if query.lower().startswith("get"):
+        command = QueryParser(query)
+        status = command.evaluate_query()
+
+        if status == "VALID":
+            command.run_query()
+        else:
+            print("ERROR: ", status)
 
 if __name__ == "__main__":
     print("Please Enter your Queries: ")

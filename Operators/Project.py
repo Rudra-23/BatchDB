@@ -6,8 +6,11 @@ class DisplayValues:
         self.table_name = table_name
         self.cols = cols
 
+        self.tmp_dir = "./TMP/"
+        self.data_dir = "./Data/"
+
     def display_values(self):
-        file_name = f"./Data/{self.table_name}.csv"
+        file_name =  self.data_dir + f"{self.table_name}.csv"
 
         batch_size = 100  
         start_row = 0
@@ -44,5 +47,5 @@ class DisplayValues:
             end_row += batch_size
 
 if __name__ == "__main__":
-    obj = DisplayValues("_filtered__sorted__joined_student_athlete", ["student.age", "student.name", "athlete.weight"])
+    obj = DisplayValues("_joined_student_athlete", ["student.age", "student.name", "athlete.weight"])
     obj.display_values()

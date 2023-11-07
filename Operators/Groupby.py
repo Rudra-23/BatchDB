@@ -8,6 +8,9 @@ class Groupby():
         self.aggregations = aggregations
         self.aggregations_func = aggregations.copy()
 
+        self.tmp_dir = "./TMP/"
+        self.data_dir = "./Data/"
+
         for (k, v) in self.aggregations_func:
             if v == "avg":
                 self.aggregations_func.append((k, "sum"))
@@ -16,8 +19,8 @@ class Groupby():
         self.aggregations_func = list(set(self.aggregations_func))
 
     def groupby_table(self):
-        with open("./Data/" + "_groupby_" + self.table_name + ".csv", 'a', newline="") as output:
-            reader = pd.read_csv("./Data/" + self.table_name + ".csv", chunksize = 1)
+        with open(self.data_dir + "_groupby_" + self.table_name + ".csv", 'a', newline="") as output:
+            reader = pd.read_csv(self.data_dir + self.table_name + ".csv", chunksize = 1)
 
             cols = [self.col] + [f"{v}({k})" for (k,v) in self.aggregations]
             output.write(",".join(cols) + "\n")

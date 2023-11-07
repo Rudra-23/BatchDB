@@ -7,18 +7,21 @@ class Join():
         self.col1 = col1
         self.col2 = col2
 
+        self.data_dir = "./Data/"
+        self.tmp_dir = "./TMP/"
+
     def join_tables(self):
 
         col1 = self.col1
         col2 = self.col2
         header = False
 
-        with open("./Data/" + "_joined_"+  self.table1 + "_"+ self.table2 + '.csv', 'a', newline="") as output:
+        with open(self.data_dir + "_joined_"+  self.table1 + "_"+ self.table2 + '.csv', 'a', newline="") as output:
             reader1 = pd.read_csv("./Data/" + self.table1 + ".csv", chunksize = 10)
             df1 = next(reader1, None)
 
             while df1 is not None:
-                reader2 = pd.read_csv("./Data/" + self.table2 + ".csv", chunksize = 10)
+                reader2 = pd.read_csv(self.data_dir + self.table2 + ".csv", chunksize = 10)
                 df2 = next(reader2, None)
 
                 if header != True:
