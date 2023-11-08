@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-class ExternalMergeSorter:
-    def __init__(self, table_name, attributes, order = "ASC"):
+class Sort:
+    def __init__(self, table_name, attributes, order = "asc"):
         self.table_name = table_name
         self.attributes = attributes
         self.order = order
@@ -11,6 +11,7 @@ class ExternalMergeSorter:
         self.data_dir = "./Data/"
 
         self.file_name = self.data_dir + table_name + ".csv"
+        self.final_file = "_sorted_" + self.table_name
 
     def split_file(self):
         chunk_size = 1000
@@ -18,7 +19,7 @@ class ExternalMergeSorter:
 
         for i, chunk in enumerate(reader):
             temp_file_name = self.tmp_dir + f"temp_{i}.csv"
-            sorted_chunk = chunk.sort_values(by=self.attributes, ascending = (True if self.order == 'ASC' else False))
+            sorted_chunk = chunk.sort_values(by=self.attributes, ascending = (True if self.order == 'asc' else False))
             sorted_chunk.to_csv(temp_file_name, index=False, header=True)
 
             with open(temp_file_name, 'w', newline="") as file:
@@ -45,7 +46,7 @@ class ExternalMergeSorter:
             
             temp_file_list = new_temp_file_list
 
-        os.rename(self.tmp_dir + temp_file_list[0], self.data_dir + "_sorted_" + self.table_name + '.csv')
+        os.rename(self.tmp_dir + temp_file_list[0], self.data_dir + self.final_file + '.csv')
 
     def merge_two_files(self, file1, file2):
 
@@ -70,7 +71,7 @@ class ExternalMergeSorter:
                 lhs = tuple(df1.loc[:, self.attributes].values[0])
                 rhs = tuple(df2.loc[:, self.attributes].values[0])
 
-                if self.order == 'DESC':
+                if self.order == 'desc':
                     lhs, rhs = rhs, lhs
                
                 if lhs <= rhs:
@@ -90,12 +91,9 @@ class ExternalMergeSorter:
 
         return merged_file_name
 
-    def sort(self):
-        self.split_file()
-        self.merge_files()
-
-if __name__ == "__main__":
-    # sorter = ExternalMergeSorter("_joined_student_athlete", ["student.age", "athlete.weight"], "DESC")
-    sorter = ExternalMergeSorter("_filtered__joined_student_athlete", ["student.age"], "ASC")
-    
-    sorter.sort()
+    def sort_file(self):
+        try:
+            self.split_file()
+            self.merge_files()
+        except:
+            raise SyntaxError

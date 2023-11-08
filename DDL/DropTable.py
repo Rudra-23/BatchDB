@@ -10,7 +10,7 @@ class DropTable:
         self.query = query
 
     def process_query(self):
-        pattern = r"drop\s+table\s+(.+)"
+        pattern = r"drop\s+table\s+(.+);"
 
         match = re.search(pattern, self.query, re.IGNORECASE)
 

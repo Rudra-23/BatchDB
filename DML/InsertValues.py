@@ -11,7 +11,7 @@ class InsertValues():
         self.query = query
 
     def process_query(self):
-        pattern = r"insert\s+into\s+(.+)\s+\((.+)\)"
+        pattern = r"insert\s+into\s+(.+)\s+\((.+)\);"
 
         match = re.search(pattern, self.query, re.IGNORECASE)
 

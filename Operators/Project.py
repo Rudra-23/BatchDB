@@ -1,7 +1,7 @@
 import pandas as pd
 from tabulate import tabulate
 
-class DisplayValues:
+class Project:
     def __init__(self, table_name, cols) -> None:
         self.table_name = table_name
         self.cols = cols
@@ -10,42 +10,40 @@ class DisplayValues:
         self.data_dir = "./Data/"
 
     def display_values(self):
-        file_name =  self.data_dir + f"{self.table_name}.csv"
+        try:
+            file_name =  self.data_dir + f"{self.table_name}.csv"
 
-        batch_size = 100  
-        start_row = 0
-        end_row = batch_size
-        headers = True
+            reader = pd.read_csv(file_name, chunksize = 100)
+            
+            header = True
 
-        while True:
-            df = pd.read_csv(file_name, skiprows=range(1, start_row), nrows=batch_size)
-
-            cols = []
-            data = []
+            df = next(reader, None)
+            self.cols = self.cols if len(self.cols) != 0 else list(df.columns)
 
             if df.empty:
-                break
-            
-            for _, item in df.iterrows():
-                if len(self.cols) == 0:
-                    data.append(item.values)
-                    cols = item.keys()
-                else:
-                    selected_data = [item[col] for col in self.cols]
-                    cols = self.cols
-                    data.append(selected_data)
-
-            if data:
-                if headers == True:
-                    table = tabulate(data, headers=cols, tablefmt="fancy_grid")
-                    headers = False
-                else:
-                    table = tabulate(data, tablefmt="fancy_grid")
+                table = tabulate([self.cols], tablefmt="fancy_grid", headers = "firstrow")
                 print(table)
+                return
 
-            start_row = end_row
-            end_row += batch_size
+            while df is not None:
+                data = []
+                
+                for _, item in df.iterrows():
+                    if len(self.cols) == 0:
+                        data.append(item.values)
+                    else:
+                        selected_data = [item[col] for col in self.cols]
+                        data.append(selected_data)
 
-if __name__ == "__main__":
-    obj = DisplayValues("_joined_student_athlete", ["student.age", "student.name", "athlete.weight"])
-    obj.display_values()
+                if data:
+                    if header == True:
+                        header = False
+                        table = tabulate(data, headers= list(self.cols), tablefmt="fancy_grid")
+                    else:
+                        table = tabulate(data, tablefmt="fancy_grid")
+                    print(table)
+
+                df = next(reader, None)
+
+        except:
+            pass
