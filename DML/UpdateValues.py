@@ -13,7 +13,7 @@ class UpdateValues:
         self.query = query
 
     def process_query(self):
-        pattern = r'update\s+\{([^)]+)\}\s+in\s+([^"]+)\s+where\s+\{([^)]+)\};'
+        pattern = r'update\s+\{([^)]+)\}\s+in the table\s+([^"]+)\s+where\s+\{([^)]+)\};'
         match = re.search(pattern, self.query, re.IGNORECASE)
 
         if match:

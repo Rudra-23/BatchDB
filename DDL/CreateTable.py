@@ -13,7 +13,7 @@ class CreateTable:
         self.query = query
 
     def process_query(self):
-        pattern = r"create\s+table\s+(.+)\s+\((.+)\);"
+        pattern = r"create\s+table\s+(.+)\s+\{(.+)\};"
 
         match = re.search(pattern, self.query, re.IGNORECASE)
 
