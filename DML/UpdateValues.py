@@ -13,14 +13,14 @@ class UpdateValues:
         self.query = query
 
     def process_query(self):
-        pattern = r'update\s+\(([^)]+)\)\s+in\s+([^"]+)\s+where\s+\(([^)]+)\);'
+        pattern = r'update\s+\{([^)]+)\}\s+in\s+([^"]+)\s+where\s+\{([^)]+)\};'
         match = re.search(pattern, self.query, re.IGNORECASE)
 
         if match:
             self.name = match.group(2)
 
             updates_str = match.group(1)
-            self.updates = dict(re.findall(r'(\w+)\s+:\s+([^,]+)', updates_str))
+            self.updates = dict(re.findall(r'(\w+)\s*:\s*([^,]+)', updates_str))
 
             self.where_conditions = match.group(3) 
 

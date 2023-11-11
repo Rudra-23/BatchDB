@@ -63,7 +63,7 @@ class InsertValues():
             
 
         file_name = "./Data/" + self.name + '.csv'
-        with open(file_name, 'a', newline='') as file:
+        with open(file_name, 'a', newline="") as file:
             writer = csv.writer(file)
             writer.writerow(self.values)
 

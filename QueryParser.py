@@ -51,10 +51,18 @@ class QueryParser:
             return "Invalid Query"        
 
 
-    def get_groupby_cols(self, select_cols):
+    def get_groupby_cols(self, select_cols, having):
+        select = select_cols.copy()
         groupby_cols = []
 
-        for col in select_cols:
+        if having:
+            pat = re.compile(r"((?:avg|sum|count|min|max)\([^\s]+\))")
+            cols = re.findall(pat, self.having_cond)
+            select += cols
+        
+        select = list(set(select))
+
+        for col in select:
             matches = re.match(r"^(avg|sum|min|max|count)\((.*)\)$", col)
             if matches:
                 groupby_cols.append((matches.group(2), matches.group(1)))
@@ -68,7 +76,7 @@ class QueryParser:
 
         try:
             self.select_cols = [element.strip() for element in self.select_cols.split(',')]
-            self.groupby_cols = self.get_groupby_cols(self.select_cols)
+            self.groupby_cols = self.get_groupby_cols(self.select_cols, self.having)
 
             if self.join:
                 join_obj = Join(self.primary_table, self.secondary_table, self.join_table1.split('.')[-1], self.join_table2.split('.')[-1])
@@ -76,7 +84,6 @@ class QueryParser:
                 tables.append(table)
                 join_obj.join_tables()
                 
-            
             if self.where:
                 where_obj = Filter(table, self.where_cond)
                 table = where_obj.final_file
@@ -89,7 +96,6 @@ class QueryParser:
                 tables.append(table)
                 sort_groupby_obj.sort_file()
                 
-
                 groupby_obj = Groupby(table, self.groupby_col, self.groupby_cols)
                 table = groupby_obj.final_file
                 tables.append(table)
@@ -114,8 +120,8 @@ class QueryParser:
             for t in tables:
                 os.remove(self.data_dir + t + '.csv')
 
-        except:
-            print("Run time error. Please check variables!")
+        except Exception as err:
+            print("Run time error. Please check variables!", str(err))
             
             for t in tables:      
                 os.unlink(self.data_dir + t + '.csv')

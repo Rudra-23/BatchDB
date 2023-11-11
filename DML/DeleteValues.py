@@ -11,7 +11,7 @@ class DeleteValues:
         self.query = query
 
     def process_query(self):
-        pattern = r'delete\s+from\s+([^"]+)\s+where\s+\(([^)]+)\);'
+        pattern = r'delete\s+from\s+([^"]+)\s+where\s+\{([^)]+)\};'
         match = re.search(pattern, self.query, re.IGNORECASE)
 
         if match:
