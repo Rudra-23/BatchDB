@@ -18,7 +18,7 @@ class Project:
             header = True
 
             df = next(reader, None)
-            self.cols = self.cols if len(self.cols) != 0 else list(df.columns)
+            self.cols = self.cols if self.cols != [''] else list(df.columns)
 
             if df.empty:
                 table = tabulate([self.cols], tablefmt="fancy_grid", headers = "firstrow")
