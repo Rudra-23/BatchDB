@@ -69,6 +69,6 @@ class Groupby():
                     
                     output.write(",".join(arr) + "\n")
             except:
-                raise SyntaxError
+                raise SyntaxError("Error: some error occurred while grouping. Please check variables")
 
             

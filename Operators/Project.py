@@ -46,4 +46,4 @@ class Project:
                 df = next(reader, None)
 
         except:
-            pass
+            raise SyntaxError("Error: Some error occurred while projecting. Please check variables")

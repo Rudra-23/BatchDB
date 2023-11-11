@@ -23,3 +23,7 @@ Ex. delete from student where {name == "abc" and id >= 10};
 
 drop table [Table_name];
 Ex. drop table student;
+
+Operators:
+
+get {[cols]} in the table [table_name] where {[cond]} groupby [col] having {condition} sortby {[cols]} [asc/desc];

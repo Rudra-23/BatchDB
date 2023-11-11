@@ -40,10 +40,9 @@ class Filter():
                         if namespace_cleaned != {} and eval(self.statement_cleaned, namespace_cleaned):
                             output.write(df.to_csv(index= False, header=False))    
                     except:
-                        print("Please check filter conditions {where and having}.")
-                        raise SyntaxError
+                        raise SyntaxError("Please check filter conditions {where and having}.")
 
                     df = next(reader, None)
             except:
-                raise SyntaxError
+                raise SyntaxError("Error: Some error occurred while filtering. Please check variables inside where and having")
         

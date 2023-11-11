@@ -95,5 +95,5 @@ class Sort:
         try:
             self.split_file()
             self.merge_files()
-        except:
-            raise SyntaxError
+        except Exception as e:
+            raise SyntaxError("Error: Some error occurred while sorting. Please check variables")

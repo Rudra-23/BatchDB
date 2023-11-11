@@ -54,5 +54,5 @@ class Join():
                     df1 = next(reader1, None)
 
             except:
-                raise SyntaxError
+                raise SyntaxError("Error: Some error occurred with joining. Please check variables")
         

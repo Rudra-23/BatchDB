@@ -123,7 +123,9 @@ class QueryParser:
         except Exception as err:
             print("Run time error. Please check variables!", str(err))
             
-            for t in tables:      
-                os.unlink(self.data_dir + t + '.csv')
-                os.remove(self.data_dir + t + '.csv')
-            
+            try:
+                for t in tables:      
+                    os.unlink(self.data_dir + t + '.csv')
+                    os.remove(self.data_dir + t + '.csv')
+            except:
+                pass    
