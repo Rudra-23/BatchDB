@@ -21,7 +21,7 @@ class QueryParser:
         self.sortby = True if "sortby" in query else False
 
     def evaluate_query(self):
-        pattern = r"get \{(.*)\} in the table (\w+)(?: joining (\w+) on ([^\s]+) = ([^\s]+))?(?: where \{([^\{\}]+)\})?(?: groupby ([\.\w]+)(?: having \{([^\{\}]+)\})?)?(?: sortby \{([^\{\}]+)\} (asc|desc))?;"
+        pattern = r"get \{(.*)\} in the table (\w+)(?: joining (\w+) on ([^\s]+) = ([^\s]+))?(?: where \{([^\{\}]+)\})?(?: groupby ([\.\w]+)(?: having \{([^\{\}]+)\})?)?(?: sortby \{([^\{\}]+)\} \{([^\{\}]+)\})?;"
 
         matches = re.match(pattern, self.query)
 
@@ -39,12 +39,19 @@ class QueryParser:
                 "groupby_col": self.groupby,
                 "having_cond": self.groupby and self.having,
                 "sort_cols": self.sortby,
-                "order": self.sortby,
+                "orders": self.sortby,
             }
 
             for attr, condition in attributes.items():
                 setattr(self, attr, groups[counter])
                 counter += 1
+
+            if self.sort_cols:
+                self.sort_cols = [element.strip() for element in self.sort_cols.split(',')]
+                self.orders = [element.strip() for element in self.orders.split(',')]
+
+                if len(self.sort_cols) != len(self.orders) or any([(element != "asc" and element != "desc") for element in self.orders]):
+                    return "Invalid Query"
 
             return "VALID"
         else:
@@ -91,7 +98,7 @@ class QueryParser:
                 where_obj.filter_data()
 
             if self.groupby:
-                sort_groupby_obj = Sort(table, [self.groupby_col], "asc")
+                sort_groupby_obj = Sort(table, [self.groupby_col], ["asc"])
                 table = sort_groupby_obj.final_file
                 tables.append(table)
                 sort_groupby_obj.sort_file()
@@ -108,8 +115,7 @@ class QueryParser:
                     having_obj.filter_data()
 
             if self.sortby:
-                self.sort_cols = [element.strip() for element in self.sort_cols.split(',')]
-                sort_obj = Sort(table, self.sort_cols, self.order)
+                sort_obj = Sort(table, self.sort_cols, self.orders)
                 table = sort_obj.final_file
                 tables.append(table)
                 sort_obj.sort_file()
@@ -128,4 +134,4 @@ class QueryParser:
                     os.unlink(self.data_dir + t + '.csv')
                     os.remove(self.data_dir + t + '.csv')
             except:
-                pass    
+                pass  

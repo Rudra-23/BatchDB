@@ -2,10 +2,12 @@ import pandas as pd
 import os
 
 class Sort:
-    def __init__(self, table_name, attributes, order = "asc"):
+    def __init__(self, table_name, attributes, orders):
         self.table_name = table_name
         self.attributes = attributes
-        self.order = order
+        self.orders = orders
+
+        self.orders = [True  if order == 'asc' else False for order in self.orders]
 
         self.tmp_dir = "./TMP/"
         self.data_dir = "./Data/"
@@ -19,7 +21,7 @@ class Sort:
 
         for i, chunk in enumerate(reader):
             temp_file_name = self.tmp_dir + f"temp_{i}.csv"
-            sorted_chunk = chunk.sort_values(by=self.attributes, ascending = (True if self.order == 'asc' else False))
+            sorted_chunk = chunk.sort_values(by=self.attributes, ascending = self.orders)
             sorted_chunk.to_csv(temp_file_name, index=False, header=True)
 
             with open(temp_file_name, 'w', newline="") as file:
@@ -48,6 +50,16 @@ class Sort:
 
         os.rename(self.tmp_dir + temp_file_list[0], self.data_dir + self.final_file + '.csv')
 
+    def check_order(self, lhs, rhs, orders):
+        for l, r, order in zip(lhs, rhs, orders):
+            if order == True:
+                if l != r:
+                    return l < r
+            else:
+                if l != r:
+                    return l > r
+        return True
+
     def merge_two_files(self, file1, file2):
 
         file1_path = os.path.join(self.tmp_dir, file1)
@@ -70,11 +82,10 @@ class Sort:
             while (df1 is not None) and (df2 is not None):
                 lhs = tuple(df1.loc[:, self.attributes].values[0])
                 rhs = tuple(df2.loc[:, self.attributes].values[0])
-
-                if self.order == 'desc':
-                    lhs, rhs = rhs, lhs
+                
+                order = self.check_order(lhs, rhs, self.orders)
                
-                if lhs <= rhs:
+                if order:
                     merged_file.write(df1.to_csv(index=False, header=False))
                     df1 = next(reader1, None)
                 else:
