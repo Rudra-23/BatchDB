@@ -4,55 +4,47 @@ class Join():
     def __init__(self, table1, table2, col1, col2) -> None:
         self.table1 = table1
         self.table2 = table2
+        
+        
         self.col1 = col1
         self.col2 = col2
-
+        
         self.data_dir = "./Data/"
         self.tmp_dir = "./TMP/"
 
-        self.final_file = "_joined_"+  self.table1 + "_" + self.table2 
+        self.final_file = "_joined_"+  self.table1 + "_" + self.table2 + "_" + self.col1
 
     def join_tables(self):
-
         col1 = self.col1
         col2 = self.col2
         header = False
-        
+
         with open(self.data_dir + self.final_file + '.csv', 'a', newline="") as output:
-            try:
-                reader1 = pd.read_csv(self.data_dir + self.table1 + ".csv", chunksize = 1000)
-                df1 = next(reader1, None)
+            try:        
+                chunk_size = 100
+                for df1_chunk in pd.read_csv(self.data_dir + self.table1 + ".csv", chunksize=chunk_size):
+                    for df2_chunk in pd.read_csv(self.data_dir + self.table2 + ".csv", chunksize=chunk_size):
 
-                while df1 is not None:
-                    reader2 = pd.read_csv(self.data_dir + self.table2 + ".csv", chunksize = 1000)
-                    df2 = next(reader2, None)
+                        if header != True:
+                            header = True
+                            list1 = [f"{self.table1.replace('_sorted_', '')}.{c1}" for c1 in list(df1_chunk.columns)]
+                            list2 = [f"{self.table2.replace('_sorted_', '')}.{c2}" for c2 in list(df2_chunk.columns)]
 
-                    if header != True:
-                        header = True
-                        list1 = [f"{self.table1}.{c1}" for c1 in list(df1.columns)]
-                        list2 = [f"{self.table2}.{c2}" for c2 in list(df2.columns)]
+                            output.write(",".join(list1 + list2) + '\n')
 
-                        output.write(",".join(list1 + list2) + '\n')
-
-
-                    while df2 is not None:
-                        for _, row1 in df1.iterrows():
-                            for _, row2 in df2.iterrows():
-                                row1 = dict(row1)
-                                row2 = dict(row2)
-
-                                if row1[col1] == row2[col2]:
+                        for i in range(0, len(df1_chunk)):
+                            for j in range(0, len(df2_chunk)):
+                                if df1_chunk.iloc[i][col1] < df2_chunk.iloc[j][col2]:
+                                    break  
+                                elif df1_chunk.iloc[i][col1] > df2_chunk.iloc[len(df2_chunk)-1][col2]:
+                                    break
+                                elif df1_chunk.iloc[i][col1] == df2_chunk.iloc[j][col2]:
                                     temp = []
-                                    for v in row1.values():
+                                    for v in df1_chunk.iloc[i].values:
                                         temp.append(str(v))
-                                    for v in row2.values():
+                                    for v in df2_chunk.iloc[j].values:
                                         temp.append(str(v))
-                                    output.write(",".join(temp) + "\n")    
+                                    output.write(",".join(temp) + "\n")
 
-                        df2 = next(reader2, None)
-        
-                    df1 = next(reader1, None)
-
-            except:
-                raise SyntaxError("Error: Some error occurred with joining. Please check variables")
-        
+            except Exception as e:
+                raise SyntaxError(f"Error: Some error occurred with joining. Please check variables")

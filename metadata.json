@@ -17,20 +17,21 @@
         }
     },
     {
-        "table_name": "students",
+        "table_name": "credits",
         "columns": {
-            "id": "int",
-            "name": "str",
-            "age": "int",
-            "gpa": "float"
+            "movie_id": "int",
+            "cast": "str",
+            "crew": "str",
+            "cast_size": "int"
         }
     },
     {
-        "table_name": "athletes",
+        "table_name": "movies",
         "columns": {
             "id": "int",
-            "sport": "str",
-            "weight": "int"
+            "title": "str",
+            "runtime": "float",
+            "genre": "str"
         }
     }
 ]

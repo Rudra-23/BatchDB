@@ -54,10 +54,16 @@ class Sort:
         for l, r, order in zip(lhs, rhs, orders):
             if order == True:
                 if l != r:
-                    return l < r
+                    if type(l) != type(r):
+                        return str(l) < str(r)
+                    else:
+                        return l < r
             else:
                 if l != r:
-                    return l > r
+                    if type(l) != type(r):
+                        return str(l) > str(r)
+                    else:
+                        return l > r
         return True
 
     def merge_two_files(self, file1, file2):
@@ -107,6 +113,5 @@ class Sort:
             self.split_file()
             self.merge_files()
         except Exception as e:
-            print(e)
-            raise SyntaxError("Error: Some error occurred while sorting. Please check variables")
+            raise SyntaxError("Error: Some error occurred while sorting or joins. Please check variables:" + e)
             

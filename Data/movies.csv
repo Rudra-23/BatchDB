@@ -1,0 +1,1001 @@
+id,title,runtime,genre
+19995,Avatar,162.0,Action
+206647,Spectre,148.0,Action
+49529,John Carter,132.0,Action
+559,SpiderMan 3,139.0,Fantasy
+38757,Tangled,100.0,Animation
+20662,Robin Hood,140.0,Action
+254,King Kong,187.0,Adventure
+597,Titanic,194.0,Drama
+44833,Battleship,131.0,Thriller
+37724,Skyfall,143.0,Action
+558,SpiderMan 2,127.0,Action
+68721,Iron Man 3,130.0,Action
+20526,TRON Legacy,125.0,Adventure
+49013,Cars 2,106.0,Animation
+10193,Toy Story 3,103.0,Animation
+168259,Furious 7,137.0,Action
+72190,World War Z,116.0,Action
+68726,Pacific Rim,131.0,Action
+62177,Brave,93.0,Animation
+10681,WALLE,98.0,Animation
+5174,Rush Hour 3,91.0,Action
+14161,2012,158.0,Action
+14160,Up,96.0,Animation
+1726,Iron Man,126.0,Action
+44826,Hugo,126.0,Adventure
+9804,Waterworld,135.0,Adventure
+150540,Inside Out,94.0,Drama
+10138,Iron Man 2,124.0,Adventure
+102651,Maleficent,97.0,Fantasy
+79698,The Lovers,109.0,Action
+64686,47 Ronin,119.0,Drama
+177572,Big Hero 6,102.0,Adventure
+27205,Inception,148.0,Action
+503,Poseidon,99.0,Adventure
+68735,Warcraft,123.0,Action
+1966,Alexander,175.0,War
+8960,Hancock,92.0,Fantasy
+6479,I Am Legend,101.0,Drama
+2062,Ratatouille,111.0,Animation
+109445,Frozen,102.0,Animation
+10195,Thor,115.0,Adventure
+13053,Bolt,98.0,Animation
+19585,GForce,88.0,Fantasy
+7978,The Wolfman,102.0,Drama
+5559,Bee Movie,91.0,Family
+266647,Pan,111.0,Adventure
+652,Troy,163.0,Adventure
+95,Armageddon,151.0,Action
+2310,Beowulf,115.0,Adventure
+13475,Star Trek,127.0,Science Fiction
+557,SpiderMan,121.0,Fantasy
+10048,Stealth,121.0,Action
+13183,Watchmen,163.0,Action
+1927,Hulk,138.0,Drama
+7364,Sahara,124.0,Action
+267935,The BFG,120.0,Adventure
+77950,Turbo,96.0,Animation
+44896,Rango,107.0,Animation
+102899,AntMan,117.0,Science Fiction
+228161,Home,94.0,Fantasy
+8961,Bad Boys II,147.0,Adventure
+27576,Salt,100.0,Action
+86834,Noah,139.0,Drama
+6972,Australia,165.0,Drama
+82700,After Earth,100.0,Science Fiction
+10567,Dinosaur,82.0,Animation
+38055,Megamind,95.0,Animation
+49524,RIPD,96.0,Fantasy
+172385,Rio 2,102.0,Animation
+36658,X2,133.0,Adventure
+51497,Fast Five,130.0,Action
+87827,Life of Pi,127.0,Adventure
+1250,Ghost Rider,114.0,Thriller
+70981,Prometheus,124.0,Science Fiction
+68724,Elysium,109.0,Science Fiction
+97020,RoboCop,102.0,Action
+7459,Speed Racer,135.0,Action
+75612,Oblivion,124.0,Action
+49519,The Croods,98.0,Adventure
+12100,Windtalkers,134.0,Drama
+49047,Gravity,91.0,Science Fiction
+9619,Dantes Peak,108.0,Action
+254128,San Andreas,114.0,Action
+2024,The Patriot,165.0,Drama
+262500,Insurgent,119.0,Adventure
+2567,The Aviator,170.0,Drama
+41513,The Smurfs,103.0,Animation
+262504,Allegiant,121.0,Adventure
+39254,Real Steel,127.0,Action
+80274,Enders Game,114.0,Science Fiction
+8489,Ali,157.0,Drama
+2048,I Robot,115.0,Action
+286217,The Martian,141.0,Drama
+1635,The Island,136.0,Action
+98,Gladiator,155.0,Action
+36955,True Lies,141.0,Action
+9268,Eraser,115.0,Action
+2486,Eragon,104.0,Fantasy
+116711,Epic,102.0,Animation
+37710,The Tourist,103.0,Action
+9946,End of Days,121.0,Action
+83542,Cloud Atlas,172.0,Drama
+314,Catwoman,104.0,Action
+184315,Hercules,99.0,Action
+257088,Point Break,114.0,Action
+22972,Green Zone,115.0,War
+9408,Surfs Up,85.0,Animation
+150689,Cinderella,105.0,Romance
+68737,Seventh Son,102.0,Adventure
+10733,The Alamo,137.0,Western
+863,Toy Story 2,92.0,Animation
+44048,Unstoppable,98.0,Action
+5175,Rush Hour 2,90.0,Action
+10674,Mulan,88.0,Animation
+271969,BenHur,125.0,Drama
+2253,Valkyrie,121.0,Drama
+257344,Pixels,105.0,Action
+686,Contact,150.0,Drama
+9383,Hollow Man,112.0,Action
+10003,The Saint,116.0,Thriller
+1535,Spy Game,126.0,Action
+46195,Rio,96.0,Animation
+10357,Volcano,104.0,Science Fiction
+4464,Seabiscuit,141.0,Drama
+664,Twister,113.0,Action
+8358,Cast Away,143.0,Adventure
+9836,Happy Feet,108.0,Animation
+4523,Enchanted,107.0,Comedy
+59961,Safe House,115.0,Action
+59108,Tower Heist,104.0,Action
+1581,The Holiday,136.0,Comedy
+7484,Open Season,83.0,Adventure
+157350,Divergent,139.0,Adventure
+10159,The Rundown,104.0,Adventure
+9341,The Core,136.0,Action
+9637,ScoobyDoo,88.0,Mystery
+49049,Dredd,95.0,Action
+9339,Click,107.0,Comedy
+16281,Creepshow,120.0,Horror
+8247,Jumper,88.0,Adventure
+1949,Zodiac,157.0,Crime
+8452,The 6th Day,123.0,Science Fiction
+8656,Deep Impact,120.0,Action
+146216,RED 2,116.0,Action
+109418,Grown Ups 2,100.0,Comedy
+11665,Get Smart,110.0,Action
+9928,Robots,91.0,Animation
+754,FaceOff,138.0,Action
+1701,Con Air,115.0,Action
+13027,Eagle Eye,118.0,Mystery
+9574,Flubber,93.0,Comedy
+2300,Space Jam,88.0,Animation
+228150,Fury,135.0,War
+41515,Yogi Bear,80.0,Comedy
+38317,Zookeeper,102.0,Comedy
+161795,Dj Vu,117.0,Romance
+9705,Swordfish,99.0,Action
+330770,Evolution,81.0,Mystery
+9433,The Edge,117.0,Action
+19959,Surrogates,89.0,Action
+11228,Daylight,115.0,Action
+10197,Nine,112.0,Drama
+9562,Timeline,116.0,Action
+9922,The Postman,177.0,Drama
+8870,Red Planet,106.0,Thriller
+36970,Oceans,84.0,Documentary
+76649,Pompeii,105.0,Action
+9533,Red Dragon,124.0,Crime
+2023,Hidalgo,136.0,Western
+953,Madagascar,86.0,Family
+36657,XMen,104.0,Adventure
+8909,Wanted,110.0,Action
+9802,The Rock,136.0,Action
+2976,Hairspray,117.0,Family
+38365,Grown Ups,102.0,Comedy
+10555,Shark Tale,90.0,Animation
+1125,Dreamgirls,134.0,Drama
+4551,Be Cool,118.0,Comedy
+612,Munich,164.0,Drama
+37821,Killers,100.0,Action
+2539,Spanglish,130.0,Comedy
+3172,Bandits,123.0,Action
+37958,Immortals,110.0,Fantasy
+2026,Hostage,113.0,Mystery
+7450,Titan AE,94.0,Animation
+9425,Soldier,99.0,Action
+25769,Carriers,84.0,Action
+23685,Monkeybone,93.0,Adventure
+9741,Unbreakable,106.0,Science Fiction
+211672,Minions,91.0,Family
+8688,Snake Eyes,98.0,Crime
+10153,Sphere,134.0,Science Fiction
+8676,Fools Gold,112.0,Romance
+4349,The Kingdom,110.0,Thriller
+197,Braveheart,177.0,Action
+25,Jarhead,125.0,Drama
+10477,Driven,116.0,Action
+6947,The Village,108.0,Drama
+2675,Signs,106.0,Drama
+809,Shrek 2,93.0,Adventure
+920,Cars,117.0,Animation
+7451,xXx,124.0,Action
+3595,Ransom,117.0,Action
+879,Hook,144.0,Adventure
+1573,Die Hard 2,124.0,Action
+9257,SWAT,117.0,Action
+1903,Vanilla Sky,136.0,Drama
+587,Big Fish,125.0,Adventure
+10395,Wolf,125.0,Fantasy
+57212,War Horse,146.0,Drama
+2756,The Abyss,139.0,Adventure
+9882,The Siege,116.0,Drama
+2270,Stardust,127.0,Adventure
+44564,The Dilemma,111.0,Comedy
+3132,Bad Company,116.0,Action
+8814,Doom,105.0,Adventure
+8427,I Spy,97.0,Action
+10592,Harts War,125.0,Drama
+11535,Rollerball,98.0,Action
+11258,Hard Rain,97.0,Thriller
+201088,Blackhat,133.0,Crime
+107846,Escape Plan,115.0,Action
+11371,The Score,124.0,Action
+11517,Money Train,103.0,Action
+214756,Ted 2,115.0,Comedy
+26428,Agora,127.0,Adventure
+9824,Mystery Men,121.0,Adventure
+48988,Hall Pass,105.0,Comedy
+9008,The Insider,157.0,Drama
+1844,Entrapment,112.0,Romance
+846,The X Files,121.0,Mystery
+425,Ice Age,81.0,Animation
+72976,Lincoln,149.0,History
+603,The Matrix,136.0,Action
+568,Apollo 13,140.0,Drama
+41733,Due Date,95.0,Comedy
+227306,Unbroken,137.0,Drama
+9350,Cliffhanger,112.0,Action
+4244,The Kid,104.0,Fantasy
+196867,Annie,119.0,Comedy
+256591,Focus,105.0,Romance
+1880,Red Dawn,114.0,Action
+10483,Death Race,105.0,Action
+550,Fight Club,139.0,Drama
+9292,Hudson Hawk,100.0,Action
+9947,Elektra,97.0,Action
+253412,Everest,121.0,Adventure
+16577,Astro Boy,94.0,Animation
+12160,Wyatt Earp,191.0,Drama
+9072,Little Man,98.0,Comedy
+3536,U571,116.0,Action
+50359,Hop,95.0,Animation
+1271,300,117.0,Action
+14306,Marley  Me,115.0,Comedy
+11199,Wild Hogs,100.0,Action
+210577,Gone Girl,145.0,Mystery
+710,GoldenEye,130.0,Adventure
+136400,2 Guns,109.0,Action
+10992,Cats  Dogs,87.0,Comedy
+8916,Antz,83.0,Adventure
+39514,RED,111.0,Action
+1538,Collateral,120.0,Drama
+11128,Ladder 49,115.0,Drama
+13576,This Is It,111.0,Music
+39538,Contagion,106.0,Drama
+14836,Coraline,100.0,Animation
+9509,Man on Fire,146.0,Action
+1487,Hellboy,122.0,Fantasy
+77174,ParaNorman,90.0,Family
+4824,The Jackal,124.0,Action
+9620,Paycheck,119.0,Action
+10771,The Tuxedo,98.0,Thriller
+274479,Joy,124.0,Drama
+7485,Shooter,124.0,Action
+17610,Year One,97.0,Comedy
+22954,Invictus,134.0,Drama
+16558,Duplicity,125.0,Romance
+16866,Planet 51,91.0,Science Fiction
+11015,The Relic,110.0,Horror
+17332,The Soloist,109.0,Drama
+38321,Priest,87.0,Action
+10052,Dragonfly,104.0,Drama
+9664,Flyboys,140.0,Action
+10384,Supernova,91.0,Horror
+11260,Meet Dave,90.0,Comedy
+9009,Dark Water,105.0,Drama
+11374,Edtv,122.0,Comedy
+2309,Inkheart,106.0,Adventure
+8285,The Spirit,103.0,Action
+210860,Mortdecai,106.0,Comedy
+293660,Deadpool,108.0,Action
+9713,Holy Man,114.0,Drama
+257445,Goosebumps,103.0,Adventure
+1370,Rambo III,102.0,Action
+72431,Red Tails,125.0,Drama
+8840,DragonHeart,103.0,Fantasy
+10530,Pocahontas,81.0,Adventure
+1924,Superman,143.0,Action
+8488,Hitch,118.0,Comedy
+35056,Date Night,97.0,Comedy
+8839,Casper,100.0,Fantasy
+9315,Flightplan,98.0,Thriller
+8984,Disclosure,123.0,Drama
+11353,Bowfinger,97.0,Comedy
+9618,Tango  Cash,104.0,Action
+175574,Free Birds,91.0,Animation
+8077,Alien,114.0,Science Fiction
+8818,Evita,134.0,History
+8195,Ronin,122.0,Action
+116149,Paddington,95.0,Family
+80035,The Watch,98.0,Comedy
+10632,The Hunted,94.0,Drama
+12117,Instinct,126.0,Drama
+13260,SemiPro,91.0,Comedy
+3580,Changeling,141.0,Crime
+9566,The Fan,116.0,Drama
+8202,on Flux,93.0,Action
+34314,Turbulence,100.0,Action
+42297,Burlesque,119.0,Drama
+802,Lolita,153.0,Drama
+10375,DTox,96.0,Action
+36586,Blade II,117.0,Fantasy
+8536,Superman II,127.0,Action
+8046,Gigli,121.0,Drama
+479,Shaft,99.0,Action
+9444,Anastasia,94.0,Animation
+261023,Black Mass,122.0,Crime
+285923,Grindhouse,191.0,Thriller
+39437,Beloved,172.0,Drama
+1950,Lucky You,124.0,Drama
+9767,The BreakUp,106.0,Romance
+11631,Mamma Mia,108.0,Comedy
+524,Casino,178.0,Drama
+9907,Barnyard,90.0,Animation
+808,Shrek,90.0,Adventure
+72105,Ted,106.0,Comedy
+10312,Patch Adams,115.0,Comedy
+2022,Mr Deeds,96.0,Comedy
+37686,Super 8,112.0,Thriller
+10201,Yes Man,104.0,Comedy
+9441,Stepmom,124.0,Drama
+274167,Daddys Home,96.0,Comedy
+388,Inside Man,129.0,Crime
+2112,Payback,100.0,Drama
+10329,Congo,109.0,Action
+13811,Knowing,121.0,Action
+8920,Garfield,80.0,Animation
+60308,Moneyball,133.0,Drama
+6950,Outbreak,127.0,Action
+225574,NonStop,106.0,Action
+2251,Unfaithful,124.0,Thriller
+231,Syriana,128.0,Drama
+9754,Firewall,105.0,Thriller
+4421,GI Jane,125.0,Action
+2649,The Game,129.0,Drama
+588,Silent Hill,125.0,Horror
+205587,The Judge,141.0,Drama
+2116,Out of Time,105.0,Thriller
+1907,The Beach,119.0,Drama
+9879,Striptease,115.0,Drama
+38579,Marmaduke,87.0,Family
+44603,Hereafter,129.0,Drama
+9691,Assassins,132.0,Action
+72710,The Host,125.0,Action
+10782,Basic,98.0,Action
+9573,Blood Work,110.0,Crime
+69668,Dream House,84.0,Drama
+9770,Mad City,114.0,Action
+38363,Fair Game,108.0,Drama
+9923,Domino,127.0,Action
+11863,Jade,95.0,Action
+18501,Gamer,95.0,Action
+329833,Zoolander 2,100.0,Comedy
+47327,Drive Angry,105.0,Fantasy
+10796,The One,87.0,Action
+1900,Traffic,147.0,Thriller
+198184,Chappie,120.0,Crime
+4547,Panic Room,111.0,Crime
+6415,Three Kings,114.0,Action
+181283,Child 44,137.0,Crime
+9896,Rat Race,112.0,Adventure
+167,KPAX,120.0,Drama
+1636,Bedazzled,93.0,Fantasy
+5176,310 to Yuma,122.0,Western
+260346,Taken 3,109.0,Thriller
+7504,Earth,101.0,Drama
+8592,Dick Tracy,103.0,Adventure
+1368,First Blood,93.0,Action
+593,Solaris,167.0,Drama
+9095,Mary Reilly,104.0,Drama
+320,Insomnia,118.0,Crime
+20533,Jonah Hex,80.0,Action
+1624,Liar Liar,86.0,Comedy
+113464,Inchon,140.0,Drama
+82675,Taken 2,91.0,Action
+10731,The Client,119.0,Drama
+146233,Prisoners,153.0,Drama
+64328,The Muppets,103.0,Comedy
+36647,Blade,120.0,Horror
+9360,Anaconda,89.0,Adventure
+6282,Coyote Ugly,100.0,Comedy
+9487,A Bugs Life,95.0,Adventure
+768,From Hell,122.0,Horror
+10478,Tin Cup,135.0,Comedy
+15045,Fat Albert,93.0,Comedy
+232672,Blended,117.0,Comedy
+82525,Savages,131.0,Crime
+9759,Cellular,94.0,Action
+841,Dune,137.0,Action
+2207,16 Blocks,105.0,Action
+9381,Babylon AD,101.0,Action
+5955,The Pledge,123.0,Crime
+9826,The Phantom,100.0,Adventure
+10858,Nixon,192.0,History
+9457,Deep Rising,106.0,Adventure
+2185,Big Trouble,85.0,Action
+116977,Foodfight,87.0,Animation
+68734,Argo,120.0,Drama
+819,Sleepers,147.0,Crime
+9623,The Juror,118.0,Drama
+10895,Pinocchio,88.0,Animation
+10468,28 Days,103.0,Comedy
+10027,Unleashed,103.0,Action
+37233,The Firm,154.0,Drama
+7443,Chicken Run,84.0,Animation
+11066,Boomerang,117.0,Comedy
+136795,The Heat,117.0,Action
+8095,Cleopatra,248.0,Drama
+11560,High Crimes,115.0,Drama
+18480,Brno,83.0,Comedy
+2749,15 Minutes,120.0,Action
+1830,Lord of War,122.0,Crime
+79,Hero,99.0,Drama
+27936,Micmacs,100.0,Action
+65,8 Mile,110.0,Drama
+240832,Lucy,89.0,Action
+4234,Scream 3,116.0,Horror
+257091,Get Hard,100.0,Comedy
+6114,Dracula,128.0,Romance
+109410,42,128.0,Drama
+9036,Eight Below,120.0,Adventure
+257211,The Intern,121.0,Comedy
+1677,Ray,152.0,Drama
+187,Sin City,124.0,Action
+9889,Shallow Hal,114.0,Comedy
+820,JFK,189.0,Drama
+6073,The Mexican,123.0,Action
+16996,17 Again,102.0,Comedy
+10336,Spawn,96.0,Action
+48138,Unknown,113.0,Action
+1579,Apocalypto,139.0,Action
+34851,Predators,107.0,Action
+209451,Jersey Boys,134.0,Music
+4970,Gothika,98.0,Horror
+11831,Amistad,155.0,Drama
+11011,Rihie Rih,95.0,Comedy
+39513,Paul,104.0,Adventure
+41446,Scream 4,111.0,Horror
+8224,8MM,123.0,Thriller
+10537,The Doors,140.0,Drama
+225886,Sex Tape,97.0,Comedy
+10385,Hanging Up,94.0,Comedy
+11431,Fever Pitch,103.0,Comedy
+8850,The Shadow,108.0,Adventure
+1833,Rent,135.0,Drama
+1683,The Reaping,99.0,Horror
+62835,Colombiana,108.0,Action
+10718,Torque,84.0,Action
+11062,City Hall,111.0,Drama
+10802,Showgirls,128.0,Drama
+10461,Get Carter,102.0,Action
+12704,Ishtar,107.0,Action
+194,Amlie,122.0,Comedy
+8849,Alfie,103.0,Comedy
+78698,Big Miracle,107.0,Adventure
+9544,FearDotCom,101.0,Horror
+7288,Duplex,89.0,Action
+14655,Soul Men,103.0,Comedy
+19898,Pandorum,108.0,Action
+4965,Impostor,102.0,Action
+15074,Extreme Ops,93.0,Action
+1272,Sunshine,107.0,Science Fiction
+20542,Delgo,94.0,Adventure
+266396,The Gunman,115.0,Action
+8271,Disturbia,105.0,Thriller
+10428,Hackers,107.0,Action
+110415,Snowpiercer,126.0,Action
+9495,The Crow,102.0,Fantasy
+16320,Serenity,119.0,Science Fiction
+12289,Red Cliff,150.0,Adventure
+9099,Sgt Bilko,90.0,Comedy
+1957,Enough,114.0,Drama
+5852,Angel Eyes,102.0,Drama
+12508,Rock Star,105.0,Music
+25793,Precious,110.0,Drama
+1091,The Thing,109.0,Horror
+87421,Riddick,119.0,Science Fiction
+10871,Switchback,118.0,Action
+68722,The Master,137.0,Drama
+14325,The Express,130.0,Drama
+312221,Creed,133.0,Drama
+23168,The Town,125.0,Crime
+10488,Nims Island,96.0,Adventure
+96721,Rush,123.0,Drama
+334,Magnolia,188.0,Drama
+23742,Cop Out,107.0,Action
+8966,Twilight,122.0,Adventure
+8470,John Q,116.0,Drama
+11001,Blue Streak,93.0,Action
+2163,Breakdown,95.0,Drama
+8409,A Man Apart,109.0,Action
+222936,Aloha,105.0,Drama
+48171,The Rite,114.0,Drama
+782,Gattaca,106.0,Thriller
+365222,Ip Man 3,105.0,Action
+268,Batman,126.0,Fantasy
+10054,Spy Kids,88.0,Action
+44264,True Grit,110.0,Drama
+1598,Cape Fear,128.0,Crime
+8065,21,123.0,Drama
+271718,Trainwreck,125.0,Comedy
+11638,Guess Who,105.0,Comedy
+11459,Sky High,100.0,Adventure
+10806,In  Out,90.0,Comedy
+9348,Species,108.0,Science Fiction
+8843,The Cell,107.0,Horror
+39486,Secretariat,123.0,Drama
+1273,TMNT,90.0,Adventure
+13920,Radio,109.0,Drama
+1883,Malcolm X,202.0,Drama
+89492,This Is 40,134.0,Comedy
+22949,Old Dogs,88.0,Comedy
+609,Poltergeist,114.0,Horror
+13051,Max Payne,100.0,Action
+49530,In Time,109.0,Action
+423,The Pianist,150.0,Drama
+2288,Closer,104.0,Drama
+88794,J Edgar,137.0,Drama
+13515,Mirrors,110.0,Horror
+169,Predator 2,108.0,Science Fiction
+8090,Untraceable,101.0,Drama
+9541,Jersey Girl,102.0,Comedy
+94348,Alex Cross,101.0,Action
+336004,Heist,93.0,Crime
+10410,Hoffa,140.0,Crime
+321741,Concussion,123.0,Drama
+59965,Abduction,106.0,Thriller
+14175,Valiant,76.0,Animation
+11004,Wonder Boys,111.0,Comedy
+98357,Broken City,109.0,Thriller
+10012,Cursed,97.0,Horror
+268920,Hot Pursuit,87.0,Action
+119283,Parker,118.0,Action
+11823,Wimbledon,98.0,Comedy
+118957,Bait,93.0,Action
+849,Krull,117.0,Fantasy
+22787,Whiteout,101.0,Action
+37498,Knock Off,91.0,Action
+144336,Sabotage,110.0,Action
+9616,The Order,102.0,Drama
+14113,Zoom,83.0,Family
+285783,The Walk,123.0,Adventure
+9726,A Good Year,118.0,Comedy
+20763,Radio Flyer,114.0,Drama
+45958,Biutiful,148.0,Drama
+1969,Bandidas,93.0,Action
+127493,Stolen,96.0,Action
+12429,Ponyo,100.0,Animation
+18254,Reds,195.0,Drama
+10877,Exit Wounds,101.0,Action
+10685,The Watcher,96.0,Mystery
+72387,Safe,94.0,Action
+12596,Pushing Tin,124.0,Comedy
+13460,Doomsday,108.0,Action
+8055,The Reader,124.0,Drama
+50647,Wanderlust,98.0,Comedy
+10719,Elf,97.0,Comedy
+9294,Phenomenon,123.0,Drama
+11888,Snow Dogs,99.0,Adventure
+9647,Scrooged,101.0,Fantasy
+9353,Nacho Libre,92.0,Comedy
+55721,Bridesmaids,125.0,Comedy
+10307,Stigmata,103.0,Horror
+22907,Takers,107.0,Action
+45612,Source Code,93.0,Thriller
+7305,Alive,120.0,Action
+11519,1941,113.0,Action
+31867,Repo Men,111.0,Action
+3587,Bogus,110.0,Fantasy
+302156,Criminal,113.0,Action
+87502,Flight,138.0,Drama
+698,Moonraker,126.0,Action
+10559,Frequency,118.0,Crime
+296099,Vacation,99.0,Comedy
+8012,Get Shorty,105.0,Comedy
+1574,Chicago,113.0,Action
+9032,Big Daddy,93.0,Comedy
+862,Toy Story,81.0,Animation
+1637,Speed,116.0,Action
+72570,The Vow,104.0,Drama
+132363,The Butler,132.0,Drama
+807,Se7en,127.0,Crime
+17654,District 9,112.0,Science Fiction
+6557,27 Dresses,111.0,Comedy
+82654,Warm Bodies,97.0,Horror
+59967,Looper,118.0,Action
+9598,Babe,89.0,Fantasy
+8780,Baby Mama,99.0,Comedy
+9715,Hope Floats,114.0,Drama
+10521,Bride Wars,89.0,Comedy
+227783,The Nut Job,85.0,Animation
+4133,Blow,124.0,Crime
+21972,Like Mike,99.0,Comedy
+4347,Atonement,123.0,Drama
+4105,Black Rain,125.0,Action
+9918,Glory Road,118.0,Drama
+273481,Sicario,121.0,Action
+307081,Southpaw,123.0,Action
+41233,Step Up 3D,107.0,Drama
+9266,Blue Crush,104.0,Adventure
+50456,Hanna,111.0,Action
+133805,Carrie,100.0,Drama
+12244,9,79.0,Action
+9452,Bulworth,108.0,Comedy
+239566,Get on Up,139.0,Drama
+9271,Virtuosity,106.0,Action
+48340,Sanctum,108.0,Action
+16232,Mr 3000,104.0,Comedy
+9920,Ultraviolet,87.0,Science Fiction
+18550,Fled,98.0,Action
+3489,88 Minutes,108.0,Crime
+37707,Splice,104.0,Horror
+9042,The Cave,97.0,Action
+17813,Alex  Emma,96.0,Comedy
+11208,Wicker Park,114.0,Drama
+28902,In Dreams,100.0,Drama
+11058,Godsend,102.0,Drama
+9989,Antitrust,108.0,Action
+9665,Glory,122.0,War
+17186,Supercross,80.0,Action
+13967,Miss Potter,92.0,Drama
+2008,The Promise,98.0,Fantasy
+76349,1911,125.0,Adventure
+265208,Wild Card,92.0,Thriller
+11499,FrostNixon,122.0,Drama
+323676,The Boss,91.0,Comedy
+12506,Cry Freedom,157.0,Drama
+24071,Mumford,112.0,Comedy
+9667,The Jacket,103.0,Drama
+812,Aladdin,90.0,Animation
+562,Die Hard,131.0,Action
+15373,Role Models,99.0,Comedy
+14292,Miracle,135.0,Drama
+2832,Identity,90.0,Mystery
+137093,Last Vegas,105.0,Comedy
+9778,Serendipity,90.0,Comedy
+8831,Timecop,99.0,Thriller
+9398,Zoolander,89.0,Comedy
+112949,Safe Haven,115.0,Romance
+10439,Hocus Pocus,96.0,Comedy
+23483,KickAss,117.0,Action
+11780,Rob Roy,139.0,Adventure
+10383,Lost Souls,97.0,Horror
+9746,Kundun,134.0,Drama
+59859,KickAss 2,103.0,Action
+13495,Alatriste,145.0,Action
+700,Octopussy,131.0,Adventure
+4964,Knocked Up,129.0,Comedy
+5125,Rendition,120.0,Drama
+245,About a Boy,101.0,Drama
+9825,Lake Placid,82.0,Horror
+61891,Anonymous,130.0,Drama
+2666,Dark City,100.0,Mystery
+12783,The Duchess,110.0,Drama
+28355,Case 39,109.0,Horror
+31582,Flawless,112.0,Comedy
+16617,Mindhunters,106.0,Mystery
+2055,Open Range,139.0,Western
+1551,Flatliners,115.0,Drama
+11460,Red Eye,85.0,Horror
+22894,Legion,100.0,Horror
+134374,Pain  Gain,130.0,Thriller
+11509,Silverado,127.0,Action
+7445,Brothers,104.0,Drama
+70436,The Raven,111.0,Crime
+36355,Flipper,95.0,Adventure
+238615,Selfless,116.0,Science Fiction
+380,Rain Man,133.0,Drama
+13223,Gran Torino,116.0,Drama
+10523,W,131.0,Drama
+8681,Taken,93.0,Action
+50014,The Help,146.0,Drama
+7191,Cloverfield,85.0,Action
+168530,Ride Along,99.0,Action
+392,Chocolat,121.0,Comedy
+11969,Tombstone,130.0,Action
+794,The Omen,111.0,Horror
+75174,The Grey,117.0,Action
+769,GoodFellas,145.0,Drama
+111,Scarface,170.0,Action
+77866,Contraband,109.0,Thriller
+9416,Money Talks,97.0,Action
+14177,Beauty Shop,105.0,Comedy
+227156,The Giver,94.0,Drama
+590,The Hours,114.0,Drama
+190955,Blood Ties,128.0,Thriller
+5123,August Rush,114.0,Drama
+4518,Elizabeth,124.0,Drama
+6116,Spice World,93.0,Adventure
+57431,The Sitter,81.0,Comedy
+21724,Dance Flick,83.0,Action
+11543,Kingpin,113.0,Comedy
+284536,The Gambler,111.0,Thriller
+9469,He Got Game,136.0,Drama
+22971,Dear John,115.0,Drama
+34813,The Losers,97.0,Action
+10431,War,103.0,Action
+9352,EuroTrip,93.0,Comedy
+22825,The Box,115.0,Thriller
+11152,The Ruins,91.0,Drama
+276907,Legend,131.0,Crime
+10074,Hot Rod,88.0,Action
+65055,Shark Night,91.0,Horror
+200505,Draft Day,109.0,Drama
+11954,Lifeforce,116.0,Fantasy
+293646,The 33,120.0,Drama
+59440,Warrior,140.0,Action
+10655,Gettysburg,254.0,War
+8988,StopLoss,113.0,Drama
+15992,Abandon,99.0,Drama
+64639,Straw Dogs,110.0,Drama
+9903,The Hoax,116.0,Comedy
+21338,Stone Cold,92.0,Action
+20766,The Road,111.0,Adventure
+24264,Sheena,117.0,Action
+9067,Tank Girl,98.0,Action
+8338,Blindness,121.0,Drama
+168705,BloodRayne,95.0,Action
+72113,Carnage,80.0,Comedy
+39845,Love Ranch,117.0,Drama
+36696,Space Dogs,85.0,Family
+38543,Ironclad,121.0,Romance
+33157,Waterloo,128.0,History
+242166,Red Sky,100.0,Action
+83770,On the Road,137.0,Adventure
+4233,Scream 2,120.0,Horror
+1788,Footloose,107.0,Drama
+11635,Old School,91.0,Comedy
+10480,Nurse Betty,108.0,Comedy
+18828,Double Take,88.0,Adventure
+24961,The Wiz,134.0,Adventure
+43593,Piranha 3D,88.0,Comedy
+41283,Faster,98.0,Crime
+19908,Zombieland,88.0,Comedy
+9737,Bad Boys,118.0,Action
+2787,Pitch Black,108.0,Thriller
+152601,Her,126.0,Romance
+10866,Joy Ride,97.0,Mystery
+19150,The Crew,88.0,Action
+70435,Haywire,93.0,Action
+354110,Forsaken,90.0,Western
+22215,Cheri,86.0,Drama
+11632,Vanity Fair,141.0,Drama
+3021,1408,104.0,Horror
+957,Spaceballs,96.0,Comedy
+251,Ghost,127.0,Fantasy
+14635,The Rookie,127.0,Drama
+11090,The Animal,84.0,Action
+783,Gandhi,191.0,Drama
+1642,The Net,114.0,Crime
+10950,I Am Sam,132.0,Drama
+235260,Son of God,138.0,Drama
+277,Underworld,121.0,Fantasy
+8999,Derailed,108.0,Drama
+10445,Shadowlands,131.0,Drama
+270487,Hail Caesar,106.0,Comedy
+204082,Homefront,100.0,Action
+5550,RoboCop 3,104.0,Action
+9075,Black Book,145.0,Drama
+11661,Joyeux Nol,116.0,Romance
+109513,Hit  Run,100.0,Action
+12085,Mad Money,104.0,Action
+38985,Sorcerer,121.0,Action
+44113,Stone,105.0,Drama
+21494,Moliere,115.0,Romance
+153158,Underdogs,106.0,Animation
+10724,Firefox,136.0,Science Fiction
+20857,Hardball,106.0,Comedy
+19255,Away We Go,98.0,Drama
+10187,Swing Vote,120.0,Drama
+44857,Molly,102.0,Drama
+50780,The Beaver,91.0,Drama
+1946,eXistenZ,97.0,Action
+9682,Pulse,90.0,Horror
+16290,Jackass 3D,94.0,Comedy
+579,Jaws 2,116.0,Horror
+226486,Tammy,97.0,Comedy
+8326,Holes,117.0,Adventure
+13497,Drumline,118.0,Drama
+376659,Bad Moms,100.0,Comedy
+10073,Date Movie,83.0,Comedy
+273895,Selma,127.0,History
+8968,Boogeyman,89.0,Thriller
+9963,Premonition,96.0,Thriller
+21208,Orphan,123.0,Horror
+272878,Max,111.0,Adventure
+9760,Epic Movie,86.0,Action
+314365,Spotlight,128.0,Drama
+16052,Selena,127.0,Drama
+1164,Babel,143.0,Drama
+14359,Doubt,104.0,Drama
+1710,Copycat,124.0,Drama
+10139,Milk,128.0,History
+335778,Risen,107.0,Action
+9645,Ghost Ship,91.0,Horror
+617,Wild Things,108.0,Crime
+48289,The Debt,113.0,Drama
+38303,You Again,105.0,Comedy
+14043,Nancy Drew,99.0,Action
+19901,Daybreakers,98.0,Fantasy
+59860,Monte Carlo,109.0,Adventure
+10069,Stay Alive,100.0,Horror
+10115,Stick It,105.0,Comedy
+25132,Shorts,89.0,Comedy
+577,To Die For,106.0,Fantasy
+328387,Nerve,96.0,Mystery
+12690,Appaloosa,115.0,Drama
+9945,Vampires,108.0,Action
+539,Psycho,109.0,Drama
+526,Ladyhawke,121.0,Adventure
+22796,Simon Birch,114.0,Comedy
+470,21 Grams,124.0,Drama
+15644,Paparazzi,84.0,Action
+9582,A Guy Thing,101.0,Comedy
+10642,Loser,98.0,Drama
+4597,Armored,88.0,Action
+81796,Lockout,95.0,Action
+10710,Envy,99.0,Comedy
+15070,Undisputed,96.0,Action
+12797,Ghost Town,102.0,Comedy
+17134,12 Rounds,108.0,Action
+41402,Let Me In,116.0,Drama
+146198,Triple 9,115.0,Action
+295964,Burnt,100.0,Drama
+9074,The Man,83.0,Action
+24432,Doogal,85.0,Family
+10929,Willard,100.0,Horror
+46435,TopsyTurvy,160.0,Comedy
+256962,Little Boy,106.0,Comedy
+23367,Bandslam,111.0,Comedy
+10740,Birth,100.0,Drama
+14652,Bon voyage,114.0,Comedy
+32316,Marci X,84.0,Comedy
+7299,Equilibrium,107.0,Action
+19457,The Yards,115.0,Drama
+314385,By the Sea,122.0,Drama
+8953,Steamboy,126.0,Animation
+10448,Rapa Nui,107.0,Adventure
+13688,CJ7,86.0,Comedy
+44638,The Tempest,110.0,Drama
+241257,Regression,106.0,Horror
+133931,Zambezia,83.0,Comedy
+280871,Ramanujan,170.0,Drama
+239897,Dwegons,98.0,Animation
+334074,Survivor,96.0,Thriller
+52449,Bad Teacher,92.0,Comedy
+12150,Sea of Love,113.0,Drama
+4232,Scream,111.0,Crime
+694,The Shining,144.0,Horror
+41210,The Switch,101.0,Comedy
+29427,The Crazies,101.0,Mystery
+244114,Firestorm,110.0,Action
+2669,The Bounty,132.0,Action
+13523,Sex Drive,109.0,Comedy
+25195,Leap Year,100.0,Romance
+22479,Kansas City,116.0,Thriller
+340611,Indignation,110.0,Drama
+2757,Adaptation,114.0,Comedy
+195589,Neighbors,96.0,Comedy
+854,The Mask,101.0,Romance
+2280,Big,104.0,Fantasy
+218043,Left Behind,110.0,Thriller
+10147,Bad Santa,91.0,Drama
+106,Predator,107.0,Science Fiction
+279,Amadeus,160.0,Drama
+8617,Prom Night,88.0,Crime
+10625,Mean Girls,97.0,Comedy
+194662,Birdman,119.0,Drama
+9829,United 93,111.0,Drama
+10028,Honey,94.0,Romance
+10535,Spy Hard,81.0,Action
+790,The Fog,89.0,Horror
+43959,Soul Surfer,106.0,Action
+10364,Catch22,121.0,War
+1578,Raging Bull,129.0,Drama
+28665,Fame,107.0,Music
+44115,127 Hours,94.0,Adventure
+321697,Steve Jobs,122.0,Drama
+11644,Blow Out,108.0,Drama
+146227,Getaway,90.0,Action
+18701,Being Julia,104.0,Comedy
+522,Ed Wood,127.0,Comedy
+130150,Labor Day,111.0,Drama
+13809,RockNRolla,114.0,Action
+27380,Megaforce,99.0,Adventure
+10549,Hamlet,242.0,Drama
+396152,Restoration,90.0,Horror
+10017,The Wraith,93.0,Romance
+11468,Salton Sea,103.0,Drama
+43434,Carlos,338.0,Crime
+332411,I Am Wrath,92.0,Action
+9389,Renaissance,105.0,Action
+9626,Red Sonja,89.0,Adventure
+75638,Red Lights,119.0,Thriller
+8363,Superbad,113.0,Comedy
+290555,Wolves,90.0,Horror
+10982,Hoodwinked,80.0,Animation
+1620,Hitman,89.0,Action
+241254,The Prince,93.0,Thriller
+1933,The Others,101.0,Horror
+679,Aliens,137.0,Horror
+9675,Sideways,126.0,Comedy
+9988,Beerfest,110.0,Comedy
+948,Halloween,91.0,Horror
+21765,Good Boy,87.0,Comedy
+7516,Smokin Aces,109.0,Action
+38117,Beastly,86.0,Drama
+13960,ATL,105.0,Drama
+16028,They,89.0,Horror
+109428,Evil Dead,91.0,Horror
+2989,Roar,102.0,Adventure
+4032,My Girl,102.0,Comedy
+10673,Wall Street,126.0,Crime
+24226,The Verdict,129.0,Drama
+9285,Road Trip,93.0,Comedy
+74643,The Artist,100.0,Drama
+13788,The Unborn,87.0,Horror
+16161,Baby Boy,130.0,Crime
+10956,Joe Dirt,91.0,Mystery
+4638,Hot Fuzz,121.0,Crime
+13972,The Women,114.0,Comedy
+30890,Radio Days,90.0,Comedy
+23169,Remember Me,113.0,Drama
+17403,How to Deal,99.0,Drama
+18475,The Cookout,97.0,Comedy
+40160,Meteor,107.0,Action
+18074,Duets,112.0,Comedy
+8009,Highlander,116.0,Adventure
+8854,Steel,97.0,Science Fiction
+68727,Trance,101.0,Thriller
+12657,Soul Plane,86.0,Romance
+12410,Good,96.0,Drama
+73935,Vamps,93.0,Comedy
+185567,Zulu,110.0,Crime
+16351,Ararat,115.0,War
+38717,Madison,99.0,Action
+18777,Slow Burn,93.0,Mystery
+2110,Wasabi,94.0,Drama
+9035,Slither,95.0,Comedy
+771,Home Alone,103.0,Comedy
+9576,Tootsie,116.0,Comedy
+744,Top Gun,110.0,Action
+9493,Twins,107.0,Comedy
+33196,Tidal Wave,120.0,Action
+132232,Mama,100.0,Horror
+208134,Bad Grandpa,92.0,Comedy
+1165,The Queen,103.0,Drama
+4011,Beetlejuice,92.0,Fantasy
+586,Wag the Dog,97.0,Comedy
+134411,Snitch,112.0,Thriller
+287903,Krampus,98.0,Horror
+9276,The Faculty,104.0,Horror
+2142,Cop Land,104.0,Action
+11478,The Skulls,106.0,Crime
+228970,Wild,115.0,Drama
+64690,Drive,100.0,Drama
+9100,The Craft,101.0,Drama
+116,Match Point,124.0,Drama
+14012,Flicka,95.0,Drama
+8975,The Marine,92.0,Action
+342521,Keanu,94.0,Action
+11495,Firestarter,114.0,Fantasy
+37003,U2 3D,85.0,Music
+13816,Idlewild,121.0,Crime
+51828,One Day,107.0,Drama
+22798,Whip It,111.0,Drama
+10743,Confidence,97.0,Action
+37718,The Muse,97.0,Fantasy
+15237,DeLovely,125.0,Drama
+12257,Home Fries,93.0,Drama
+68,Brazil,132.0,Comedy
+4911,Dark Blue,118.0,Action
+9557,Boat Trip,94.0,Comedy
+18276,Hoot,91.0,Drama
+8321,In Bruges,107.0,Comedy
+72359,Peeples,95.0,Comedy
+10186,The Rocker,102.0,Comedy
+25704,Post Grad,89.0,Comedy
+6552,Idle Hands,92.0,Thriller
+112430,The Company,276.0,Drama
