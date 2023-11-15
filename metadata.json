@@ -7,7 +7,7 @@
             "age": "int",
             "gpa": "float"
         }
-    }, 
+    },
     {
         "table_name": "athlete",
         "columns": {
@@ -24,7 +24,7 @@
             "age": "int",
             "gpa": "float"
         }
-    }, 
+    },
     {
         "table_name": "athletes",
         "columns": {

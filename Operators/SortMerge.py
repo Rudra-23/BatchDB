@@ -32,20 +32,19 @@ class SortMergeJoin():
 
                             output.write(",".join(list1 + list2) + '\n')
 
-                        i = j = 0
-                        while i < len(df1_chunk) and j < len(df2_chunk):
-                            if df1_chunk.iloc[i][col1] < df2_chunk.iloc[j][col2]:
-                                i += 1
-                            elif df1_chunk.iloc[i][col1] > df2_chunk.iloc[j][col2]:
-                                j += 1
-                            else:
-                                temp = []
-                                for v in df1_chunk.iloc[i].values:
-                                    temp.append(str(v))
-                                for v in df2_chunk.iloc[j].values:
-                                    temp.append(str(v))
-                                output.write(",".join(temp) + "\n")
-                                j += 1
+                        for i in range(0, len(df1_chunk)):
+                            for j in range(0, len(df2_chunk)):
+                                if df1_chunk.iloc[i][col1] < df2_chunk.iloc[j][col2]:
+                                    break  
+                                elif df1_chunk.iloc[i][col1] > df2_chunk.iloc[len(df2_chunk)-1][col2]:
+                                    break
+                                elif df1_chunk.iloc[i][col1] == df2_chunk.iloc[j][col2]:
+                                    temp = []
+                                    for v in df1_chunk.iloc[i].values:
+                                        temp.append(str(v))
+                                    for v in df2_chunk.iloc[j].values:
+                                        temp.append(str(v))
+                                    output.write(",".join(temp) + "\n")
 
             except Exception as e:
                 raise SyntaxError(f"Error: Some error occurred with joining. Please check variables")

@@ -85,7 +85,7 @@ if __name__ == "__main__":
         if query == "":
             continue
         
-        if query == "exit":
+        if query == "exit;":
             break
         
         parseQuery(query)
