@@ -6,6 +6,7 @@ from Operators.Filter import Filter
 from Operators.Sort import Sort
 from Operators.Groupby import Groupby
 from Operators.Project import Project
+from Operators.SortMerge import SortMergeJoin
 
 class QueryParser:
     
@@ -86,7 +87,22 @@ class QueryParser:
             self.groupby_cols = self.get_groupby_cols(self.select_cols, self.having)
 
             if self.join:
-                join_obj = Join(self.primary_table, self.secondary_table, self.join_table1.split('.')[-1], self.join_table2.split('.')[-1])
+                col1 = self.join_table1.split('.')[-1]
+                col2 = self.join_table2.split('.')[-1]
+
+                # join_obj = Join(self.primary_table, self.secondary_table, col1, col2)
+
+                sort_obj1 = Sort(self.primary_table, [col1], ['asc'])
+                table = sort_obj1.final_file
+                tables.append(table)
+                sort_obj1.sort_file()
+
+                sort_obj2 = Sort(self.secondary_table, [col2], ['asc'])
+                table = sort_obj2.final_file
+                tables.append(table)
+                sort_obj2.sort_file()
+
+                join_obj = SortMergeJoin(sort_obj1.final_file, sort_obj2.final_file, col1, col2)
                 table = join_obj.final_file
                 tables.append(table)
                 join_obj.join_tables()

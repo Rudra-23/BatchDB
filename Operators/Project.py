@@ -13,7 +13,7 @@ class Project:
         try:
             file_name =  self.data_dir + f"{self.table_name}.csv"
 
-            reader = pd.read_csv(file_name, chunksize = 100)
+            reader = pd.read_csv(file_name, chunksize = 1000)
             
             header = True
 

@@ -16,7 +16,7 @@ class Sort:
         self.final_file = "_sorted_" + self.table_name
 
     def split_file(self):
-        chunk_size = 1000
+        chunk_size = 500
         reader = pd.read_csv(self.file_name, chunksize=chunk_size)
 
         for i, chunk in enumerate(reader):
@@ -107,4 +107,6 @@ class Sort:
             self.split_file()
             self.merge_files()
         except Exception as e:
+            print(e)
             raise SyntaxError("Error: Some error occurred while sorting. Please check variables")
+            

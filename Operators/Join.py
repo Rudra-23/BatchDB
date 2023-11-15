@@ -20,11 +20,11 @@ class Join():
         
         with open(self.data_dir + self.final_file + '.csv', 'a', newline="") as output:
             try:
-                reader1 = pd.read_csv("./Data/" + self.table1 + ".csv", chunksize = 10)
+                reader1 = pd.read_csv(self.data_dir + self.table1 + ".csv", chunksize = 1000)
                 df1 = next(reader1, None)
 
                 while df1 is not None:
-                    reader2 = pd.read_csv(self.data_dir + self.table2 + ".csv", chunksize = 10)
+                    reader2 = pd.read_csv(self.data_dir + self.table2 + ".csv", chunksize = 1000)
                     df2 = next(reader2, None)
 
                     if header != True:

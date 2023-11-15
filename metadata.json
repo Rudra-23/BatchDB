@@ -15,5 +15,22 @@
             "sport": "str",
             "weight": "int"
         }
+    },
+    {
+        "table_name": "students",
+        "columns": {
+            "id": "int",
+            "name": "str",
+            "age": "int",
+            "gpa": "float"
+        }
+    }, 
+    {
+        "table_name": "athletes",
+        "columns": {
+            "id": "int",
+            "sport": "str",
+            "weight": "int"
+        }
     }
 ]
