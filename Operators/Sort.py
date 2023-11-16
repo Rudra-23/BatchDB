@@ -16,7 +16,7 @@ class Sort:
         self.final_file = "_sorted_" + self.table_name
 
     def split_file(self):
-        chunk_size = 500
+        chunk_size = 300
         reader = pd.read_csv(self.file_name, chunksize=chunk_size)
 
         for i, chunk in enumerate(reader):
