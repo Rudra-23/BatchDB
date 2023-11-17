@@ -109,6 +109,7 @@ class QueryParser:
                 table = where_obj.final_file
                 tables.append(table)
                 where_obj.filter_data()
+                
 
             if self.groupby:
                 sort_groupby_obj = Sort(table, [self.groupby_col], ["asc"])
@@ -126,6 +127,7 @@ class QueryParser:
                     table = having_obj.final_file
                     tables.append(table)
                     having_obj.filter_data()
+                    
 
             if self.sortby:
                 sort_obj = Sort(table, self.sort_cols, self.orders)
@@ -140,11 +142,10 @@ class QueryParser:
                 os.remove(self.data_dir + t + '.csv')
 
         except Exception as err:
-            print("Run time error. Please check variables!", str(err))
+            print("Run time error. Please check variables!" + str(err))   
             
-            try:
-                for t in tables:      
-                    os.unlink(self.data_dir + t + '.csv')
+            for t in tables:  
+                try:
                     os.remove(self.data_dir + t + '.csv')
-            except:
-                pass  
+                except Exception as err:
+                    pass 

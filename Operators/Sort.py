@@ -108,10 +108,15 @@ class Sort:
 
         return merged_file_name
 
-    def sort_file(self):
+    def sort_files(self):
         try:
             self.split_file()
             self.merge_files()
+            return "success"
         except Exception as e:
-            raise SyntaxError("Error: Some error occurred while sorting or joins. Please check variables:" + e)
-            
+            return "err"
+
+    def sort_file(self):
+        status = self.sort_files()
+        if status == "err":
+            raise SyntaxError("Error: Some error occurred while sorting or joins. Please check variables:")
