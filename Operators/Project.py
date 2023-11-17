@@ -9,7 +9,7 @@ class Project:
         self.tmp_dir = "./TMP/"
         self.data_dir = "./Data/"
 
-    def display_values(self):
+    def process_table(self):
         try:
             file_name =  self.data_dir + f"{self.table_name}.csv"
 
@@ -23,7 +23,7 @@ class Project:
             if df.empty:
                 table = tabulate([self.cols], tablefmt="fancy_grid", headers = "firstrow")
                 print(table)
-                return
+                return "success"
 
             while df is not None:
                 data = []
@@ -45,5 +45,14 @@ class Project:
 
                 df = next(reader, None)
 
+            return "success"
         except:
+            return "err"
+        
+    def display_values(self):
+        status = self.process_table()
+
+        if status == 'err':
             raise SyntaxError("Error: Some error occurred while projecting. Please check variables")
+
+
