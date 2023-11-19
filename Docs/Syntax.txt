@@ -24,6 +24,32 @@ Ex. delete from student where {name == "abc" and id >= 10};
 drop table [Table_name];
 Ex. drop table student;
 
-Operators:
+6. Projections
 
-get {[cols]} in the table [table_name] where {[cond]} groupby [col] having {condition} sortby {[cols]} [asc/desc];
+General syntax: get [q1] in the table [q2] where [q3] groupby col having [q3] sortby [q4];
+
+where, groupby having and sortby are optional.
+having is not allowed without groupby.
+
+q1 is columns i.e. {col1, col2, col3, ...} or {} for all the columns in the table.
+
+q2 can single table i.e table 
+q2 can be joins i.e. table1 joining table2 on table1.col1 = table2.col1
+if joins are used then table.col must be used instead of col for q1, q3 and q4.
+
+q3 is a condition are boolean expressions.
+q4 is columns and orders i.e. {col1, col2, col3, ...} {asc, desc, asc, ...}
+
+Examples:
+
+get {} in the table student;
+get {age, gpa} in the table student where {age >= 10 and gpa <= 3.5};
+
+get {age, avg(gpa)} in the table student groupby age;
+get {age, avg(gpa)} in the table student groupby age having {avg(gpa) >= 3.2};
+
+get {student.name, athlete.sport} in the table student joining athlete on student.id = athlete.id;
+
+get {} in the table student sortby {age, gpa} {desc, asc};
+
+get {athlete.sport, avg(student.gpa)} in the table student joining athlete on student.id = athlete.id where {student.age >= 10} groupby athlete.sport having {avg(student.gpa) >= 3.2} sortby {athlete.sport, avg(student.gpa)} {asc, desc};
