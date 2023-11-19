@@ -19,7 +19,7 @@ class Groupby():
 
         self.aggregations_func = list(set(self.aggregations_func))
 
-    def groupby_table(self):
+    def groupby_vals(self):
 
         with open(self.data_dir + self.final_file + ".csv", 'a', newline="") as output:
             try:
@@ -69,6 +69,12 @@ class Groupby():
                     
                     output.write(",".join(arr) + "\n")
             except:
-                raise SyntaxError("Error: some error occurred while grouping. Please check variables")
-
+                return "err"
             
+        return "success"
+
+    def groupby_table(self):
+        status = self.groupby_vals()
+
+        if status == "err":
+            raise SyntaxError("Error: some error occurred while grouping. Please check variables")
