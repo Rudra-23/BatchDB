@@ -20,7 +20,6 @@ id,title,runtime,genre
 62177,Brave,93.0,Animation
 10681,WALLE,98.0,Animation
 5174,Rush Hour 3,91.0,Action
-14161,2012,158.0,Action
 14160,Up,96.0,Animation
 1726,Iron Man,126.0,Action
 44826,Hugo,126.0,Adventure
@@ -251,7 +250,6 @@ id,title,runtime,genre
 9072,Little Man,98.0,Comedy
 3536,U571,116.0,Action
 50359,Hop,95.0,Animation
-1271,300,117.0,Action
 14306,Marley  Me,115.0,Comedy
 11199,Wild Hogs,100.0,Action
 210577,Gone Girl,145.0,Mystery
@@ -438,7 +436,6 @@ id,title,runtime,genre
 4234,Scream 3,116.0,Horror
 257091,Get Hard,100.0,Comedy
 6114,Dracula,128.0,Romance
-109410,42,128.0,Drama
 9036,Eight Below,120.0,Adventure
 257211,The Intern,121.0,Comedy
 1677,Ray,152.0,Drama
@@ -518,7 +515,6 @@ id,title,runtime,genre
 10054,Spy Kids,88.0,Action
 44264,True Grit,110.0,Drama
 1598,Cape Fear,128.0,Crime
-8065,21,123.0,Drama
 271718,Trainwreck,125.0,Comedy
 11638,Guess Who,105.0,Comedy
 11459,Sky High,100.0,Adventure
@@ -585,7 +581,6 @@ id,title,runtime,genre
 22907,Takers,107.0,Action
 45612,Source Code,93.0,Thriller
 7305,Alive,120.0,Action
-11519,1941,113.0,Action
 31867,Repo Men,111.0,Action
 3587,Bogus,110.0,Fantasy
 302156,Criminal,113.0,Action
@@ -621,7 +616,6 @@ id,title,runtime,genre
 9266,Blue Crush,104.0,Adventure
 50456,Hanna,111.0,Action
 133805,Carrie,100.0,Drama
-12244,9,79.0,Action
 9452,Bulworth,108.0,Comedy
 239566,Get on Up,139.0,Drama
 9271,Virtuosity,106.0,Action
@@ -641,7 +635,6 @@ id,title,runtime,genre
 17186,Supercross,80.0,Action
 13967,Miss Potter,92.0,Drama
 2008,The Promise,98.0,Fantasy
-76349,1911,125.0,Adventure
 265208,Wild Card,92.0,Thriller
 11499,FrostNixon,122.0,Drama
 323676,The Boss,91.0,Comedy
@@ -762,7 +755,6 @@ id,title,runtime,genre
 354110,Forsaken,90.0,Western
 22215,Cheri,86.0,Drama
 11632,Vanity Fair,141.0,Drama
-3021,1408,104.0,Horror
 957,Spaceballs,96.0,Comedy
 251,Ghost,127.0,Fantasy
 14635,The Rookie,127.0,Drama
@@ -999,3 +991,12 @@ id,title,runtime,genre
 25704,Post Grad,89.0,Comedy
 6552,Idle Hands,92.0,Thriller
 112430,The Company,276.0,Drama
+8461,Funny Games,112.0,Horror
+331592,Listening,100.0,Drama
+19,Metropolis,153.0,Drama
+11190,The Return,105.0,Thriller
+16353,Ong Bak 2,98.0,Adventure
+23759,Centurion,97.0,Adventure
+172391,Khumba,85.0,Animation
+262543,Automata,110.0,Thriller
+
