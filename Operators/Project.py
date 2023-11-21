@@ -13,11 +13,14 @@ class Project:
         try:
             file_name =  self.data_dir + f"{self.table_name}.csv"
 
-            reader = pd.read_csv(file_name, chunksize = 1000)
+            batch_size = 100
+            start_row = 0
+            end_row = batch_size
+
+            df = pd.read_csv(file_name, nrows = batch_size, skiprows= range(1, start_row))
             
             header = True
 
-            df = next(reader, None)
             self.cols = self.cols if self.cols != [''] else list(df.columns)
 
             if df.empty:
@@ -25,7 +28,7 @@ class Project:
                 print(table)
                 return "success"
 
-            while df is not None:
+            while df is not None and not df.empty:
                 data = []
                 
                 for _, item in df.iterrows():
@@ -43,7 +46,9 @@ class Project:
                         table = tabulate(data, tablefmt="fancy_grid")
                     print(table)
 
-                df = next(reader, None)
+                start_row = end_row + 1
+                end_row += batch_size
+                df = pd.read_csv(file_name, nrows = batch_size, skiprows= range(1, start_row))
 
             return "success"
         except:
@@ -54,5 +59,4 @@ class Project:
 
         if status == 'err':
             raise SyntaxError("Error: Some error occurred while projecting. Please check variables")
-
 

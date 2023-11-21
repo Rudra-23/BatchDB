@@ -20,9 +20,10 @@ class Filter():
     def filter_rows(self):
             with open(self.data_dir + self.final_file + '.csv', 'a', newline="") as output:
                 try:
-                    reader = pd.read_csv(self.data_dir + self.table_name + '.csv', chunksize = 1)
-
-                    df = next(reader, None)
+                    chunk_size = 1
+                    start_row = 0
+                    end_row = chunk_size
+                    df = pd.read_csv(self.data_dir + self.table_name + '.csv', nrows = chunk_size, skiprows = range(1, start_row))     
 
                     output.write(",".join(list(df.columns)) + '\n')
                     
@@ -41,7 +42,9 @@ class Filter():
                         except:
                             return "err"
                         
-                        df = next(reader, None)
+                        start_row = end_row + 1
+                        end_row += chunk_size
+                        df = pd.read_csv(self.data_dir + self.table_name + '.csv', nrows = 1, skiprows = range(1, start_row)) 
                     
                     return "success"
                 
@@ -52,4 +55,3 @@ class Filter():
         status = self.filter_rows()
         if status == "err":
             raise SyntaxError(" Error: while handling where or having condition. Please check Variables")
-            

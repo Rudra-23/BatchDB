@@ -20,20 +20,23 @@ class Groupby():
         self.aggregations_func = list(set(self.aggregations_func))
 
     def groupby_vals(self):
+        try:
+            with open(self.data_dir + self.final_file + ".csv", 'a', newline="") as output:
+                chunk_size = 1
 
-        with open(self.data_dir + self.final_file + ".csv", 'a', newline="") as output:
-            try:
-                reader = pd.read_csv(self.data_dir + self.table_name + ".csv", chunksize = 1)
+                start_row = 0
+                end_row = chunk_size
+                df = pd.read_csv(self.data_dir + self.table_name + ".csv", nrows = chunk_size, skiprows = range(1, start_row))
 
                 cols = [self.col] + [f"{v}({k})" for (k,v) in self.aggregations]
-                output.write(",".join(cols) + "\n")
-                df = next(reader, None)
+                output.write(",".join(cols) + "\n") 
+                
 
-                while df is not None and not df.empty:
+                while not df.empty:
                     column = df[self.col].values[0]
-
                     values = {}
-                    while df is not None and column == df[self.col].values[0]:
+                    while not df.empty and column == df[self.col].values[0]:
+                        
                         for (col, func) in self.aggregations_func:
                             item = f"{func}({col})"
                             if func == "sum":
@@ -57,7 +60,10 @@ class Groupby():
                                 else:
                                     values[item] = 1
 
-                        df = next(reader, None)
+                        start_row = end_row + 1
+                        end_row += chunk_size
+                        df = pd.read_csv(self.data_dir + self.table_name + ".csv", nrows = 1, skiprows= range(1, start_row))
+                                        
 
                     for k, v in self.aggregations:
                         if v == "avg":
@@ -68,10 +74,10 @@ class Groupby():
                     arr = [str(column)] + arr  
                     
                     output.write(",".join(arr) + "\n")
-            except:
-                return "err"
-            
-        return "success"
+                            
+            return "success"
+        except:
+            return "err"
 
     def groupby_table(self):
         status = self.groupby_vals()

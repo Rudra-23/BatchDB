@@ -17,15 +17,23 @@ class Sort:
 
     def split_file(self):
         chunk_size = 300
-        reader = pd.read_csv(self.file_name, chunksize=chunk_size)
+        start_row = 0
+        end_row = chunk_size
+        df = pd.read_csv(self.file_name, nrows =chunk_size, skiprows= range(1, start_row))
 
-        for i, chunk in enumerate(reader):
+        i = 0
+
+        while not df.empty:
             temp_file_name = self.tmp_dir + f"temp_{i}.csv"
-            sorted_chunk = chunk.sort_values(by=self.attributes, ascending = self.orders)
-            sorted_chunk.to_csv(temp_file_name, index=False, header=True)
+            sorted_chunk = df.sort_values(by=self.attributes, ascending = self.orders)
 
             with open(temp_file_name, 'w', newline="") as file:
                 sorted_chunk.to_csv(file, index = False, header = True)
+
+            start_row = end_row + 1
+            end_row += chunk_size
+            df = pd.read_csv(self.file_name, nrows =chunk_size, skiprows= range(1, start_row))
+            i += 1
 
     def merge_files(self):
         temp_file_list = sorted(os.listdir(self.tmp_dir))
@@ -77,15 +85,17 @@ class Sort:
         with open(merged_file_path, 'w', newline="") as merged_file:
             chunksize = 1
 
-            reader1 = pd.read_csv(file1_path, chunksize=chunksize)
-            reader2 = pd.read_csv(file2_path, chunksize=chunksize)
+            s1 = 0
+            e1 = chunksize
+            s2 = 0
+            e2 = chunksize
 
-            df1 = next(reader1, None)
-            df2 = next(reader2, None)
+            df1 = pd.read_csv(file1_path, nrows = chunksize, skiprows= range(1, s1))
+            df2 = pd.read_csv(file2_path, nrows = chunksize, skiprows= range(1, s2))
 
             merged_file.write(",".join(list(df1.columns)) + '\n')
             
-            while (df1 is not None) and (df2 is not None):
+            while (df1 is not None and not df1.empty) and (df2 is not None and not df2.empty):
                 lhs = tuple(df1.loc[:, self.attributes].values[0])
                 rhs = tuple(df2.loc[:, self.attributes].values[0])
                 
@@ -93,18 +103,26 @@ class Sort:
                
                 if order:
                     merged_file.write(df1.to_csv(index=False, header=False))
-                    df1 = next(reader1, None)
+                    s1 = e1 + 1
+                    e1 += chunksize
+                    df1 = pd.read_csv(file1_path, nrows = chunksize, skiprows= range(1, s1))
                 else:
                     merged_file.write(df2.to_csv(index=False, header=False))
-                    df2 = next(reader2, None)
+                    s2 = e2 + 1
+                    e2 += chunksize
+                    df2 = pd.read_csv(file2_path, nrows = chunksize, skiprows= range(1, s2))
             
-            while df1 is not None:
+            while df1 is not None and not df1.empty:
                 merged_file.write(df1.to_csv(index=False, header=False))
-                df1 = next(reader1, None)
+                s1 = e1 + 1
+                e1 += chunksize
+                df1 = pd.read_csv(file1_path, nrows = chunksize, skiprows= range(1, s1))
             
-            while df2 is not None:
+            while df2 is not None and not df2.empty:
                 merged_file.write(df2.to_csv(index=False, header=False))
-                df2 = next(reader2, None)
+                s2 = e2 + 1
+                e2 += chunksize
+                df2 = pd.read_csv(file2_path, nrows = chunksize, skiprows= range(1, s2))
 
         return merged_file_name
 
@@ -120,3 +138,4 @@ class Sort:
         status = self.sort_files()
         if status == "err":
             raise SyntaxError("Error: Some error occurred while sorting or joins. Please check variables:")
+        
