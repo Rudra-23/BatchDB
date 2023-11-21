@@ -43,20 +43,21 @@ class Join():
                             output.write(",".join(list1 + list2) + '\n')
                         
                         
-                        for i in range(0, len(df1_chunk)):
-                            for j in range(0, len(df2_chunk)):
-                                
-                                if df1_chunk.iloc[i][col1] < df2_chunk.iloc[j][col2]:
-                                    break  
-                                elif df1_chunk.iloc[i][col1] > df2_chunk.iloc[len(df2_chunk)-1][col2]:
-                                    break
-                                elif df1_chunk.iloc[i][col1] == df2_chunk.iloc[j][col2]:
-                                    temp = []
-                                    for v in df1_chunk.iloc[i].values:
-                                        temp.append(str(v))
-                                    for v in df2_chunk.iloc[j].values:
-                                        temp.append(str(v))
-                                    output.write(",".join(temp) + "\n")
+                        if (df1_chunk.iloc[len(df1_chunk)-1][col1] < df2_chunk.iloc[0][col2]):
+                            pass 
+                        elif (df1_chunk.iloc[0][col1] > df2_chunk.iloc[len(df2_chunk)-1][col2]):
+                            pass
+                        else:
+                            for i in range(0, len(df1_chunk)):
+                                for j in range(0, len(df2_chunk)):
+                                    
+                                    if df1_chunk.iloc[i][col1] == df2_chunk.iloc[j][col2]:
+                                        temp = []
+                                        for v in df1_chunk.iloc[i].values:
+                                            temp.append(str(v))
+                                        for v in df2_chunk.iloc[j].values:
+                                            temp.append(str(v))
+                                        output.write(",".join(temp) + "\n")
                         
                         s2 = e2 + 1
                         e2 += chunk_size
