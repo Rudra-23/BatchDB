@@ -21,8 +21,12 @@ class Sort:
         end_row = chunk_size
         df = pd.read_csv(self.file_name, nrows =chunk_size, skiprows= range(1, start_row))
 
-        i = 0
+        if df.empty:
+            with open(self.data_dir + self.final_file + '.csv', 'a') as output:
+                 output.write(",".join(list(df.columns)) + '\n')
+                 return
 
+        i = 0
         while not df.empty:
             temp_file_name = self.tmp_dir + f"temp_{i}.csv"
             sorted_chunk = df.sort_values(by=self.attributes, ascending = self.orders)
@@ -37,6 +41,9 @@ class Sort:
 
     def merge_files(self):
         temp_file_list = sorted(os.listdir(self.tmp_dir))
+
+        if len(temp_file_list) == 0:
+            return
 
         while len(temp_file_list) > 1:
             new_temp_file_list = []
