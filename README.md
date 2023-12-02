@@ -2,38 +2,38 @@
 
 A relational database management system which is designed for handling large datasets in low memory systems.
 
-This document outlines the available commands for interacting with a simple database. Some sample tables are already added for student, athlete, movies and credits to test queries.
+This document outlines the available commands for interacting with a simple database. 
 
 ### Commands
 
 **Create:**
 
 * Syntax: `create table [Table_name] {col1: data type1, col2: data type2};`
-* Example: `create table student {id int, name str, age int, gpa float};`
+* Example: `create table user {id int, name str, points float};`
 * Creates a new table with specified columns and data types.
 
 **Insert:**
 
 * Syntax: `insert into the table [Table_name] {value1, value2, ...};`
-* Example: `insert into the table student {1, "rudra", 10, 3.92};`
+* Example: `insert into the table user {1, "user1", 3.92};`
 * Inserts a new row into the specified table with provided values. Values must correspond to the order of columns defined in the table creation.
 
 **Update:**
 
 * Syntax: `update {col1: value1, col2: value2, ..} in the table [Table_name] where {conditions};`
-* Example: `update {name: "xyz"} in the table student where {name == "abc" and id >= 10};`
+* Example: `update {name: "xyz"} in the table user where {name == "user1" and id == 1};`
 * Updates values of specified columns in a table where the provided conditions are met. Conditions are boolean expressions using operators like `==`, `>=`, etc.
 
 **Delete:**
 
 * Syntax: `delete from the table [Table_name] where {conditions};`
-* Example: `delete from the table student where {name == "abc" and id >= 10};`
+* Example: `delete from the table user where {name == "xyz" or id >= 10};`
 * Deletes rows from a table where the provided conditions are met. Conditions are boolean expressions using operators like `==`, `>=`, etc.
 
 **Drop:**
 
 * Syntax: `drop table [Table_name];`
-* Example: `drop table student;`
+* Example: `drop table user;`
 * Permanently deletes the specified table.
 
 **Projections:**
@@ -43,6 +43,8 @@ This document outlines the available commands for interacting with a simple data
   * `groupby col`: Groups rows by the specified column.
   * `having [q3]`: Filters grouped rows based on the provided condition (not allowed without groupby).
   * `sortby [q4]`: Sorts the result by specified columns and order (`asc` or `desc`).
+
+Some sample tables are already added for student and athlete to test example queries. You can also try similar queries with real world datasets: movies and credits.
 
 **Examples:**
 
