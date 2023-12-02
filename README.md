@@ -4,6 +4,8 @@ A relational database management system which is designed for handling large dat
 
 This document outlines the available commands for interacting with a simple database. 
 
+To use the database, install required libraries via  `pip install -r requirements.txt`, then run the application using `python terminal.py`.
+
 ### Commands
 
 **Create:**
