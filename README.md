@@ -20,6 +20,8 @@ To use the database, install required libraries via  `pip install -r requirement
 * Example: `insert into the table user {1, "user1", 3.92};`
 * Inserts a new row into the specified table with provided values. Values must correspond to the order of columns defined in the table creation.
 
+To check the table, use: `get {} in the table user;`
+
 **Update:**
 
 * Syntax: `update {col1: value1, col2: value2, ..} in the table [Table_name] where {conditions};`
