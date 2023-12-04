@@ -1,3 +1,5 @@
+import os
+
 from DDL.CreateTable import CreateTable
 from DDL.DropTable import DropTable
 
@@ -79,6 +81,11 @@ def parseQuery(query: str):
             print("ERROR: ", status)
 
 if __name__ == "__main__":
+
+    directory_path = "./TMP/"
+    if not os.path.exists(directory_path):
+        os.mkdir(directory_path)
+
     print("Please Enter your Queries: ")
     while True:
         query = input("DB > ")
