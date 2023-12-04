@@ -2,7 +2,7 @@
 
 A relational database management system which is designed for handling large datasets in low memory systems.
 
-This document outlines the available commands for interacting with a simple database. 
+This document outlines the available commands for interacting with a simple database.
 
 To use the database, install required libraries via  `pip install -r requirements.txt`, then run the application using `python terminal.py`.
 
@@ -46,18 +46,29 @@ To use the database, install required libraries via  `pip install -r requirement
   * `having [q3]`: Filters grouped rows based on the provided condition (not allowed without groupby).
   * `sortby [q4]`: Sorts the result by specified columns and order (`asc` or `desc`).
 
-Some sample tables are already added for student and athlete to test example queries. You can also try similar queries with real world datasets: movies and credits.
+Some real world datasets are already added for movies and credits to test example queries. You can also try similar queries with small datasets: student and athlete.
 
 **Examples:**
 
-* `get {} in the table student;` (Gets all columns from the student table)
-* `get {age, gpa} in the table student where {age >= 10 and gpa <= 3.5};` (Gets age and gpa columns for students with age >= 10 and gpa <= 3.5)
-* `get {age, avg(gpa)} in the table student groupby age;` (Gets age and average gpa for each age group)
-* `get {age, avg(gpa)} in the table student groupby age having {avg(gpa) >= 3.2};` (Gets age and average gpa for each age group where average gpa >= 3.2)
-* `get {student.name, athlete.sport} in the table student joining athlete on student.id = athlete.id;` (Joins student and athlete tables on student.id and athlete.id, then gets name and sport)
-* `get {} in the table student sortby {age, gpa} {desc, asc};` (Gets all columns from student table sorted by age (desc) and gpa (asc))
-* `get {athlete.sport, avg(student.gpa)} in the table student joining athlete on student.id = athlete.id where {student.age >= 10} groupby athlete.sport having {avg(student.gpa) >= 3.2} sortby {athlete.sport, avg(student.gpa)} {asc, desc};` (Joins student and athlete tables, filters students with age >= 10, groups by sport in athlete table, filters groups with average gpa >= 3.2, gets sport and average gpa, then sorts by sport (asc) and average gpa (desc))
+* `get {} in the table movies;`
+* `get {} in the table movies where {runtime >= 180 and genre != 'Action'};`
+* `get {genre, count(genre), avg(runtime)} in the table movies groupby genre;`
+* `get {genre, count(genre), avg(runtime)} in the table movies groupby genre having {avg(runtime) >= 120};`
+* `get {} in the table movies joining credits on movies.id = credits.movie_id;`
+* `get {} in the table movies sortby {genre, runtime} {desc, asc};`
+* `get {movies.genre, avg(credits.cast_size), max(movies.runtime)} in the table movies joining credits on movies.id = credits.movie_id where {movies.runtime >= 120} groupby movies.genre having {avg(credits.cast_size) >= 30} sortby {movies.genre} {desc};`
 
-Finally, 
+Finally,
 
 * To exit: `exit;`
+
+File structure:
+
+* The directory Data, TMP and metadata.json is about storing and processing the data.
+* DDL directory contains files about create and drop table commands.
+* DML directory contains files about insert, update and delete rows.
+* Operators contains python files implementing operators like join, sort, groupby etc.
+* QueryParser does query execution and manages complex queries.
+* terminal.py is the terminal to input queries and output results.
+* Docs contains syntax of query language.
+* Rests are utility files for maintaining the project.
