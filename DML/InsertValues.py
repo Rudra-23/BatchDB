@@ -11,23 +11,26 @@ class InsertValues():
         self.query = query
 
     def process_query(self):
-        pattern = r"insert\s+into the table\s+(.+)\s+\{(.+)\};"
+        try:
+            pattern = r"insert\s+into the table\s+(.+)\s+\{(.+)\};"
 
-        match = re.search(pattern, self.query, re.IGNORECASE)
+            match = re.search(pattern, self.query, re.IGNORECASE)
 
-        if match:
-            self.name = match.group(1)
-            
-            values = match.group(2)
-            values = values.split(',')
+            if match:
+                self.name = match.group(1)
+                
+                values = match.group(2)
+                values = values.split(',')
 
-            self.values = []
-            for val in values:
-                val = val.strip()
-                self.values.append(val)
+                self.values = []
+                for val in values:
+                    val = val.strip()
+                    self.values.append(val)
 
-            return "VALID"
-        else:
+                return "VALID"
+            else:
+                return "INVALID QUERY"
+        except:
             return "INVALID QUERY"
         
     def is_valid(self, name):

@@ -11,15 +11,18 @@ class DeleteValues:
         self.query = query
 
     def process_query(self):
-        pattern = r'delete\s+from the table\s+([^"]+)\s+where\s+\{([^)]+)\};'
-        match = re.search(pattern, self.query, re.IGNORECASE)
+        try:
+            pattern = r'delete\s+from the table\s+([^"]+)\s+where\s+\{([^)]+)\};'
+            match = re.search(pattern, self.query, re.IGNORECASE)
 
-        if match:
-            self.name = match.group(1)
-            self.where_conditions = match.group(2)
+            if match:
+                self.name = match.group(1)
+                self.where_conditions = match.group(2)
 
-            return "VALID"
-        else:
+                return "VALID"
+            else:
+                return "INVALID QUERY"
+        except:
             return "INVALID QUERY"
 
     def delete_values(self):

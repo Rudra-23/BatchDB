@@ -13,19 +13,22 @@ class UpdateValues:
         self.query = query
 
     def process_query(self):
-        pattern = r'update\s+\{([^)]+)\}\s+in the table\s+([^"]+)\s+where\s+\{([^)]+)\};'
-        match = re.search(pattern, self.query, re.IGNORECASE)
+        try:
+            pattern = r'update\s+\{([^)]+)\}\s+in the table\s+([^"]+)\s+where\s+\{([^)]+)\};'
+            match = re.search(pattern, self.query, re.IGNORECASE)
 
-        if match:
-            self.name = match.group(2)
+            if match:
+                self.name = match.group(2)
 
-            updates_str = match.group(1)
-            self.updates = dict(re.findall(r'(\w+)\s*:\s*([^,]+)', updates_str))
+                updates_str = match.group(1)
+                self.updates = dict(re.findall(r'(\w+)\s*:\s*([^,]+)', updates_str))
 
-            self.where_conditions = match.group(3) 
+                self.where_conditions = match.group(3) 
 
-            return "VALID"
-        else:
+                return "VALID"
+            else:
+                return "INVALID QUERY"
+        except:
             return "INVALID QUERY"
 
     def is_valid_data(self, item):

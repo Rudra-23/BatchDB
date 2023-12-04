@@ -21,40 +21,43 @@ class QueryParser:
         self.sortby = True if "sortby" in query else False
 
     def evaluate_query(self):
-        pattern = r"get \{(.*)\} in the table (\w+)(?: joining (\w+) on ([^\s]+) = ([^\s]+))?(?: where \{([^\{\}]+)\})?(?: groupby ([\.\w]+)(?: having \{([^\{\}]+)\})?)?(?: sortby \{([^\{\}]+)\} \{([^\{\}]+)\})?;"
+        try:
+            pattern = r"get \{(.*)\} in the table (\w+)(?: joining (\w+) on ([^\s]+) = ([^\s]+))?(?: where \{([^\{\}]+)\})?(?: groupby ([\.\w]+)(?: having \{([^\{\}]+)\})?)?(?: sortby \{([^\{\}]+)\} \{([^\{\}]+)\})?;"
 
-        matches = re.match(pattern, self.query)
+            matches = re.match(pattern, self.query)
 
-        if matches:
-            groups = matches.groups()
-            counter = 0
+            if matches:
+                groups = matches.groups()
+                counter = 0
 
-            attributes = {
-                "select_cols": True,
-                "primary_table": True,
-                "secondary_table": self.join,
-                "join_table1": self.join,
-                "join_table2": self.join,
-                "where_cond": self.where,
-                "groupby_col": self.groupby,
-                "having_cond": self.groupby and self.having,
-                "sort_cols": self.sortby,
-                "orders": self.sortby,
-            }
+                attributes = {
+                    "select_cols": True,
+                    "primary_table": True,
+                    "secondary_table": self.join,
+                    "join_table1": self.join,
+                    "join_table2": self.join,
+                    "where_cond": self.where,
+                    "groupby_col": self.groupby,
+                    "having_cond": self.groupby and self.having,
+                    "sort_cols": self.sortby,
+                    "orders": self.sortby,
+                }
 
-            for attr, condition in attributes.items():
-                setattr(self, attr, groups[counter])
-                counter += 1
+                for attr, condition in attributes.items():
+                    setattr(self, attr, groups[counter])
+                    counter += 1
 
-            if self.sort_cols:
-                self.sort_cols = [element.strip() for element in self.sort_cols.split(',')]
-                self.orders = [element.strip() for element in self.orders.split(',')]
+                if self.sort_cols:
+                    self.sort_cols = [element.strip() for element in self.sort_cols.split(',')]
+                    self.orders = [element.strip() for element in self.orders.split(',')]
 
-                if len(self.sort_cols) != len(self.orders) or any([(element != "asc" and element != "desc") for element in self.orders]):
-                    return "Invalid Query"
+                    if len(self.sort_cols) != len(self.orders) or any([(element != "asc" and element != "desc") for element in self.orders]):
+                        return "Invalid Query"
 
-            return "VALID"
-        else:
+                return "VALID"
+            else:
+                return "Invalid Query"
+        except:
             return "Invalid Query"        
 
 

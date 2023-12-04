@@ -10,14 +10,17 @@ class DropTable:
         self.query = query
 
     def process_query(self):
-        pattern = r"drop\s+table\s+(.+);"
+        try:
+            pattern = r"drop\s+table\s+(.+);"
 
-        match = re.search(pattern, self.query, re.IGNORECASE)
+            match = re.search(pattern, self.query, re.IGNORECASE)
 
-        if match:
-            self.name = match.group(1)
-            return "VALID"
-        else:
+            if match:
+                self.name = match.group(1)
+                return "VALID"
+            else:
+                return "INVALID QUERY"
+        except:
             return "INVALID QUERY"
 
     def drop_table(self):

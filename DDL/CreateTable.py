@@ -13,24 +13,27 @@ class CreateTable:
         self.query = query
 
     def process_query(self):
-        pattern = r"create\s+table\s+(.+)\s+\{(.+)\};"
+        try:
+            pattern = r"create\s+table\s+(.+)\s+\{(.+)\};"
 
-        match = re.search(pattern, self.query, re.IGNORECASE)
+            match = re.search(pattern, self.query, re.IGNORECASE)
 
-        if match:
-            self.name = match.group(1)
-            
-            columns = match.group(2)
-            columns = columns.split(',')
+            if match:
+                self.name = match.group(1)
+                
+                columns = match.group(2)
+                columns = columns.split(',')
 
-            self.cols = {}
-            for col in columns:
-                col = col.strip()
-                name, data_type = col.split(" ")
-                self.cols[name] = data_type
-            
-            return "VALID"
-        else:
+                self.cols = {}
+                for col in columns:
+                    col = col.strip()
+                    name, data_type = col.split(" ")
+                    self.cols[name] = data_type
+                
+                return "VALID"
+            else:
+                return "INVALID QUERY"
+        except:
             return "INVALID QUERY"
 
     def create_table(self):

@@ -10,7 +10,7 @@ To use the database, install required libraries via  `pip install -r requirement
 
 **Create:**
 
-* Syntax: `create table [Table_name] {col1: data type1, col2: data type2};`
+* Syntax: `create table [Table_name] {col1 datatype1, col2 datatype2};`
 * Example: `create table user {id int, name str, points float};`
 * Creates a new table with specified columns and data types.
 
