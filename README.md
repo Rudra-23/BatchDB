@@ -6,6 +6,10 @@ This document outlines the available commands for interacting with a simple data
 
 To use the database, install required libraries via  `pip install -r requirements.txt`, then run the application using `python terminal.py`.
 
+### Architecture
+
+![Flow Diagram](https://github.com/Rudra-23/BatchDB/assets/54005905/67fb20c9-58d1-41f6-b481-421fa3d75f1a)
+
 ### Commands
 
 **Create:**
@@ -64,13 +68,13 @@ Finally,
 
 * To exit: `exit;`
 
-File structure:
+### Examples
 
-* The directory Data, TMP and metadata.json is about storing and processing the data.
-* DDL directory contains files about create and drop table commands.
-* DML directory contains files about insert, update and delete rows.
-* Operators contains python files implementing operators like join, sort, groupby etc.
-* QueryParser does query execution and manages complex queries.
-* terminal.py is the terminal to input queries and output results.
-* Docs contains syntax of query language.
-* Rests are utility files for maintaining the project.
+<img src="https://github.com/Rudra-23/BatchDB/assets/54005905/17a98221-7a86-4191-b59c-284fbb2cba27" width="80%">
+<br>
+<img src="https://github.com/Rudra-23/BatchDB/assets/54005905/f7351b4b-2b95-437c-8b21-bc0e31ff2ba4" width="80%">
+<br>
+<img src="https://github.com/Rudra-23/BatchDB/assets/54005905/ebad28bd-c68c-4936-9beb-a3ba22c42f00" width="80%">
+<br>
+<img src="https://github.com/Rudra-23/BatchDB/assets/54005905/00090d39-c714-4f63-911a-d4d21d02dd0c" width="80%">
+
