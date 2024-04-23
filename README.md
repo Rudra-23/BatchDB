@@ -78,3 +78,6 @@ Finally,
 <br>
 <img src="https://github.com/Rudra-23/BatchDB/assets/54005905/00090d39-c714-4f63-911a-d4d21d02dd0c" width="80%">
 
+References:
+
+Pandas (nrows): <a href = "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">docs</a>
