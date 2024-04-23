@@ -82,9 +82,11 @@ def parseQuery(query: str):
 
 if __name__ == "__main__":
 
-    directory_path = "./TMP/"
-    if not os.path.exists(directory_path):
-        os.mkdir(directory_path)
+    directory_paths = ["./TMP/", "./Data/"]
+
+    for path in directory_paths:
+        if not os.path.exists(path):
+            os.mkdir(path)
 
     print("Please Enter your Queries: ")
     while True:
