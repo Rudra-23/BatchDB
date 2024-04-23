@@ -78,6 +78,7 @@ Finally,
 <br>
 <img src="https://github.com/Rudra-23/BatchDB/assets/54005905/00090d39-c714-4f63-911a-d4d21d02dd0c" width="80%">
 
-References:
+### References:
 
-Pandas (nrows): <a href = "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">docs</a>
+* Pandas (nrows): <a href = "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">docs</a>
+* Python's append: <a href = "https://stackoverflow.com/questions/65067610/does-pythons-append-file-write-mode-only-write-new-bytes-or-does-it-re-write#:~:text=The%20POSIX%20append%20mode%20simply,the%20end%20of%20the%20file.">stack-overflow</a>
