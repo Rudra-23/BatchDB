@@ -82,3 +82,13 @@ Finally,
 
 * Pandas (nrows): <a href = "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">docs</a>
 * Python's append: <a href = "https://stackoverflow.com/questions/65067610/does-pythons-append-file-write-mode-only-write-new-bytes-or-does-it-re-write#:~:text=The%20POSIX%20append%20mode%20simply,the%20end%20of%20the%20file.">stack-overflow</a>
+
+Mem usage (When loading entire table in memory):
+
+![image](https://github.com/Rudra-23/BatchDB/assets/54005905/73ec9f9f-3481-4d1c-9508-f19c7872c575)
+
+Mem usage (When loading same table with BatchDB):
+
+![image](https://github.com/Rudra-23/BatchDB/assets/54005905/d8ab3e10-486e-42fe-8d19-4de82499cc58)
+
+
