@@ -33,13 +33,5 @@
             "runtime": "float",
             "genre": "str"
         }
-    },
-    {
-        "table_name": "large",
-        "columns": {
-            "Column1": "int",
-            "Column2": "float",
-            "Column3": "str"
-        }
     }
 ]
