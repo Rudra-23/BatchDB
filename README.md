@@ -49,7 +49,7 @@ To check the table, use: `get {} in the table user;`
 * Syntax: `get [q1] in the table [q2] where [q3] groupby col having [q3] sortby [q4];`
 * Optional clauses: groupby, having, sortby.
   * `groupby col`: Groups rows by the specified column.
-  * `having [q3]`: Filters grouped rows based on the provided condition (not allowed without groupby).
+  * `where [q3]` and `having [q3]`: Filters grouped rows based on the provided condition (having not allowed without groupby).
   * `sortby [q4]`: Sorts the result by specified columns and order (`asc` or `desc`).
 
 Some real world datasets are already added for movies and credits to test example queries. You can also try similar queries with small datasets: student and athlete.
