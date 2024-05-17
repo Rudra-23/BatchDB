@@ -47,7 +47,7 @@ To check the table, use: `get {} in the table user;`
 **Projections:**
 
 * Syntax: `get [q1] in the table [q2] where [q3] groupby col having [q3] sortby [q4];`
-* Optional clauses: groupby, having, sortby.
+* Optional clauses: where, groupby, having, sortby.
   * `groupby col`: Groups rows by the specified column.
   * `where [q3]` and `having [q3]`: Filters grouped rows based on the provided condition (having not allowed without groupby).
   * `sortby [q4]`: Sorts the result by specified columns and order (`asc` or `desc`).
@@ -91,4 +91,5 @@ Mem usage (When loading same table with BatchDB):
 
 ![image](https://github.com/Rudra-23/BatchDB/assets/54005905/d8ab3e10-486e-42fe-8d19-4de82499cc58)
 
+Check Assets in tests for more details.
 
